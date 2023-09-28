@@ -9,7 +9,7 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
 
       <div className="loginContainer">
       <div className="app-title">
-      <h2>i n l i n e r</h2>
+      <h2>Laborer</h2>
       <p>save your time</p>
       </div>
         <input

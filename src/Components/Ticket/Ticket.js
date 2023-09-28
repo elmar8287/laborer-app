@@ -109,16 +109,17 @@ const Ticket = ({user, myTickets, accounts}) => {
         </p> 
         :
         <div>
-        <h2>Queue request</h2>
+        <h2>Request form</h2>
         {created && 
           <div className="success-login">
-            <h4>Queue successfully created!</h4>
-            <p>Your line number is</p>
+            <h4>Request successfully created!</h4>
+            
             <h3>{user.line}</h3>More detail in
-        <Link to="/tickets" className="success-login-link">My tickets</Link> section</div>}
+        <Link to="/tickets" className="success-login-link">My requests</Link> section</div>}
         {
           created ? null :
           <form ref={form} className="ticket-form" onSubmit={handleSubmit}>
+            <span className='text-sm my-2'>For which date you need the service</span>
           <input type="date" required min={minDate} placeholder="Select the date" value={date} onChange={(e)=> {setDate(e.target.value); modalHandle()}} name="lineDate"/>
           <input type="text" required placeholder='select the time' value={selectedTime} onClick={()=> setTimeModal(true)} name="time"/>
           {
@@ -131,10 +132,27 @@ const Ticket = ({user, myTickets, accounts}) => {
   
            {/* <Select options={options} value={cat} onChange={(e)=> setCat(e.target.value)} /> */}
           <select required value={cat} onChange={(e)=> setCat(e.target.value)} name="category">
-            <option hidden>Select the category</option>
-            <option>Oil</option>
-            <option>Engine issue</option>
-            <option>Wheel repair</option>
+            <option hidden>Select the service type</option>
+            <option>Appliance Repair</option>
+            <option>Basic HVAC Maintenance</option>
+            <option>Carpentry</option>
+            <option>Deck and Fence Repair</option>
+            <option>Drywall and Plaster Repair</option>
+            <option>Electrical</option>
+            <option>Emergency Repairs</option>
+            <option>Flooring</option>
+            <option>Furniture Assembly</option>
+            <option>Gutter Repair and Cleaning</option>
+            <option>Home Insulation</option>
+            <option>Home Maintenance</option>
+            <option>Home Safety</option>
+            <option>Minor Landscaping</option>
+            <option>Painting</option>
+            <option>Plumbing</option>
+            <option>Pressure Washing</option>
+            <option>Small Plumbing and Electrical Jobs</option>
+            <option>Tiling</option>
+            <option>Window and Door Repair</option>
             <option>Other</option>
           </select>
           <input type="hidden" value={profileData.vendor} name="clientVendor" />
@@ -147,10 +165,6 @@ const Ticket = ({user, myTickets, accounts}) => {
           <input type="hidden" value={user.email} name="userMail" />
           <input type="number" min="0" maxlength="10" required placeholder="Odometer (km)" value={odo} onChange={(e)=> setOdo(e.target.value)} name="odometer" />
           <textarea name="message" type="text-area" maxlength="100" placeholder="Notes" value={note} onChange={(e)=> setNote(e.target.value)} />
-          {
-            !inLineCheking ? <button type="submit">Create</button>
-            : <p className="date-error">There is already request on selected date</p>
-          }
         </form>
         }
         
