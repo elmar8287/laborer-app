@@ -18,6 +18,7 @@ const Ticket = ({user, myTickets, accounts}) => {
   const [description, setDescription] = useState('');
   const [deadline, setDeadline] = useState('');
   const [cost, setCost] = useState('');
+  const [zip, setZip] = useState("");
   const [lastAdded, setLastAdded] = useState("")
   const [showLast, setShowLast] = useState("")
 
@@ -43,7 +44,10 @@ const Ticket = ({user, myTickets, accounts}) => {
         description: description,
         deadline: deadline,
         cost: cost,
+        zip: zip,
         created: datedate,
+        status: "New",
+        
       }).then((docRef) => {
         const docId = docRef.id;
         setLastAdded(docId)
@@ -57,6 +61,7 @@ const Ticket = ({user, myTickets, accounts}) => {
       setDeadline("")
       setDescription("")
       setCost("")
+      setZip()
  
   };
 
@@ -154,6 +159,8 @@ const Ticket = ({user, myTickets, accounts}) => {
             <option>Window and Door Repair</option>
             <option>Other (please, mark in description)</option>
           </select>
+          <label className='text-sm font-semibold mt-4'>ZIP code</label>
+          <input type="text" maxlength="50" required placeholder="ZIP code" value={zip} onChange={(e)=> setZip(e.target.value)} name="zip"/>
           <label className='text-sm font-semibold mt-4'>Address line</label>
           <input type="text" maxlength="50" required placeholder="Address line" value={address} onChange={(e)=> setAddress(e.target.value)} name="address"/>
           <label className='text-sm font-semibold mt-4'>Please, mark the deadline</label>
@@ -161,7 +168,7 @@ const Ticket = ({user, myTickets, accounts}) => {
           <label className='text-sm font-semibold mt-4'>What is the maximum amount you are willing to pay?</label>
           <input type="number" required min="0" max="1000000" placeholder="$" value={cost} onChange={(e)=> setCost(e.target.value)} name="cost"/>
           <label className='text-sm font-semibold mt-4'>Please describe your needs in detail</label>
-          <textarea maxlength="400" required placeholder="Detail information" value={description} onChange={(e)=> setDescription(e.target.value)} name="description" rows="4" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'></textarea>
+          <textarea maxlength="400" required placeholder="Detail information" value={description} onChange={(e)=> setDescription(e.target.value)} name="description" rows="4" className='block p-2.5 w-full text-md text-gray-900 bg-gray-150 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'></textarea>
           
           {/* <input type="hidden" value={profileData.vendor} name="clientVendor" />
           <input type="hidden" value={profileData.model} name="clientModel" />
