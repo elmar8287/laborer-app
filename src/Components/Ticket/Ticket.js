@@ -160,7 +160,7 @@ const Ticket = ({user, myTickets, accounts}) => {
             <option>Other (please, mark in description)</option>
           </select>
           <label className='text-sm font-semibold mt-4'>ZIP code</label>
-          <input type="text" maxlength="50" required placeholder="ZIP code" value={zip} onChange={(e)=> setZip(e.target.value)} name="zip"/>
+          <input type="text" maxlength="8" required placeholder="ZIP code" value={zip} onChange={(e)=> setZip(e.target.value)} name="zip"/>
           <label className='text-sm font-semibold mt-4'>Address line</label>
           <input type="text" maxlength="50" required placeholder="Address line" value={address} onChange={(e)=> setAddress(e.target.value)} name="address"/>
           <label className='text-sm font-semibold mt-4'>Please, mark the deadline</label>

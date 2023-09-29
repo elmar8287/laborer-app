@@ -28,7 +28,8 @@ const Account = ({user, accounts}) => {
       state: state,
       address: address,
       created: datedate,
-      hasProfile: "1"
+      hasProfile: "1",
+      role: "user"
     }).then((docRef) => {
       const docId = docRef.id;
     }).catch((err) => {
