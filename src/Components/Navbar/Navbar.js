@@ -47,10 +47,9 @@ export default ({handleLogout, user, myTickets}) => {
 
     // Replace javascript:void(0) paths with your paths
     const navigation = [
-        { title: "Features", path: "javascript:void(0)" },
-        { title: "Integrations", path: "javascript:void(0)" },
-        { title: "Customers", path: "javascript:void(0)" },
-        { title: "Pricing", path: "javascript:void(0)" }
+        { title: "Home", path: "/" },
+        { title: "My requests", path: "/tickets" },
+        { title: "Account", path: "/account" }
     ]
 
     useEffect(() => {
@@ -64,7 +63,7 @@ export default ({handleLogout, user, myTickets}) => {
         <nav className={`bg-white pb-5 md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
             <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-2 md:block">
-                    <a href="javascript:void(0)">
+                    <a href="#">
                         <img
                             src={logo}
                             width={100}
@@ -92,23 +91,21 @@ export default ({handleLogout, user, myTickets}) => {
                 </div>
                 <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
                     <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                        {
-                            navigation.map((item, idx) => {
-                                return (
-                                    <li key={idx} className="text-gray-700 hover:text-gray-900">
-                                        <a href={item.path} className="block">
-                                            {item.title}
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
+                        <li className="text-gray-700 hover:text-gray-900">
+                        <Link to="/">Home</Link>
+                        </li>
+                        <li className="text-gray-700 hover:text-gray-900">
+                        <Link to="/tickets">My requests</Link>
+                        </li>
+                        <li className="text-gray-700 hover:text-gray-900">
+                        <Link to="/account">Account</Link>
+                        </li>
                     </ul>
                     <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
                     {
           user ?
           <div className="avatar">
-            <h2>Welcome, <span className="user-info">{user.displayName ? user.displayName : user.email}</span></h2>
+            <h2>Welcome, <span className="user-info text-orange-500 font-extrabold">{user.displayName ? user.displayName : user.email}</span></h2>
             {
               user.photoURL ? <img src={user.photoURL} alt="avatar"/> : <p> </p>
             }
@@ -116,12 +113,12 @@ export default ({handleLogout, user, myTickets}) => {
           :
           <h2>Welcome</h2>
         }
-                        <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+                        <Link to="/" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex " onClick={handleLogout}>
                             Logout
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                 <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

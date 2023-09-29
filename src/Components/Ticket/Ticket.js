@@ -108,9 +108,12 @@ const Ticket = ({user, myTickets, accounts}) => {
     <div className="ticket">
       {
         profileData.length===0 ? 
-        <p>This is your first login! Before you start, we ask you to fill the information in the 
-          <Link to="/account"> Account</Link> section.
+        <div>
+        <h2 className='text-orange-500 font-extrabold text-3xl'>Congratulations!</h2>
+        <p>This is your first login! Before you start, we kindly ask you to fill the information in the 
+          <Link to="/account" className='text-orange-500 font-extrabold'> Account</Link> section.
         </p> 
+        </div>
         :
         <div>
         <h2 className='text-3xl font-extrabold'>Request form</h2>

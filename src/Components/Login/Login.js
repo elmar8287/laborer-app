@@ -1,5 +1,8 @@
 import React from 'react';
 import firebase from 'firebase';
+import "../App/App.css"
+
+const logo = require("../../images/logo-laborer-app.png")
 
 const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount, emailError, passwordError}) => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -8,9 +11,10 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
     <section className="login">
 
       <div className="loginContainer">
-      <div className="app-title">
-      <h2>Laborer</h2>
-      <p>save your time</p>
+      <div className="app-title flex justify-center">
+      {/* <h2>Laborer</h2>
+      <p>save your time</p> */}
+      <img src={logo} className='w-[200px] rounded-lg' />
       </div>
         <input
           maxlength="50"
@@ -36,13 +40,13 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
           {
             !hasAccount ? (
               <>
-                <button type="button" onClick={handleLogin}>Login</button>
+                <button type="button" onClick={handleLogin} className='p-3 bg-green-400'>Login</button>
                 <p>Not registrated? <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
               </>
             ) : (
               <>
-              <button type="button" onClick={handleSignup}>Sign Up</button>
-              <p>Already registrated? <span  onClick={() => setHasAccount(!hasAccount)}>Login</span></p>
+              <button  className='p-3 bg-orange-400' type="button" onClick={handleSignup}>Sign Up</button>
+              <p>Already registrated? <span className='text-green-500' onClick={() => setHasAccount(!hasAccount)}>Login</span></p>
             </>
             )
           }
