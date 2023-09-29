@@ -5,17 +5,19 @@ import {
 } from 'react-router-dom';
 import firebase from 'firebase';
 import moment from 'moment';
-import "./Ticket.css";
-import Queue from '../Queue/Queue';
-import Timing from '../../Timing/Timing';
+import "./Ticket.css"
+
 
 const Ticket = ({user, myTickets, accounts}) => {
   
   const form = useRef();
   const [date, setDate] = useState('');
   const [cat, setCat] = useState('Not selected');
-  const [odo, setOdo] = useState('');
-  const [note, setNote] = useState('');
+  const [time, setTime] = useState('');
+  const [address, setAddress] = useState('');
+  const [description, setDescription] = useState('');
+  const [deadline, setDeadline] = useState('');
+  const [cost, setCost] = useState('');
   const [lastAdded, setLastAdded] = useState("")
   const [showLast, setShowLast] = useState("")
 
@@ -35,13 +37,13 @@ const Ticket = ({user, myTickets, accounts}) => {
       db.collection("Tickets").add({
         user: user.email,
         date: date,
-        time: selectedTime,
+        time: time,
         cat: cat,
-        odo: odo,
-        note: note,
+        address: address,
+        description: description,
+        deadline: deadline,
+        cost: cost,
         created: datedate,
-        inLine: "1",
-        line: user.line
       }).then((docRef) => {
         const docId = docRef.id;
         setLastAdded(docId)
@@ -49,10 +51,12 @@ const Ticket = ({user, myTickets, accounts}) => {
       });
       setDate("")
       setCat("")
-      setOdo("")
-      setNote("")
+      setTime("")
+      setAddress("")
       setCreated(true)
-      selectedTime("")
+      setDeadline("")
+      setDescription("")
+      setCost("")
  
   };
 
@@ -69,34 +73,34 @@ const Ticket = ({user, myTickets, accounts}) => {
     setTimeModal(!timeModal)
   }
 
-  let range = myTickets.filter(e=>e.date===date).map(e=>(e.time))
-  const [selectedTime, setSelectedTime] = useState("")
-  const saveTime = () => {
-    if(!range.includes(selectedTime)) {
-      range.push(selectedTime)
-      console.log(range)
-    }
-  }
+  // let range = myTickets.filter(e=>e.date===date).map(e=>(e.time))
+  // const [selectedTime, setSelectedTime] = useState("")
+  // const saveTime = () => {
+  //   if(!range.includes(selectedTime)) {
+  //     range.push(selectedTime)
+  //     console.log(range)
+  //   }
+  // }
 
-  const timeOptions = (e) => {
-    setSelectedTime(e.target.value)
-  }
+  // const timeOptions = (e) => {
+  //   setSelectedTime(e.target.value)
+  // }
 
-  const [inLineCheking, setInLineChecking] = useState(false)
+  // const [inLineCheking, setInLineChecking] = useState(false)
 
-  const inLineCheckingHandle = () => {
-    if(myTickets.filter(e=>e.date===date)
-    .filter(e=>e.user===user.email)
-    .filter(e=>e.inLine==="1").length===1) {
-      setInLineChecking(true)
-    } else {
-      setInLineChecking(false)
-    }
-  }
+  // const inLineCheckingHandle = () => {
+  //   if(myTickets.filter(e=>e.date===date)
+  //   .filter(e=>e.user===user.email)
+  //   .filter(e=>e.inLine==="1").length===1) {
+  //     setInLineChecking(true)
+  //   } else {
+  //     setInLineChecking(false)
+  //   }
+  // }
 
-  useEffect(()=> {
-    inLineCheckingHandle()
-  },[date])
+  // useEffect(()=> {
+  //   inLineCheckingHandle()
+  // },[date])
 
   const profileData = accounts.filter(e => e.user === user.email)
 
@@ -109,35 +113,54 @@ const Ticket = ({user, myTickets, accounts}) => {
         </p> 
         :
         <div>
-        <h2>Queue request</h2>
+        <h2 className='text-2xl font-extrabold'>Request form</h2>
         {created && 
           <div className="success-login">
-            <h4>Queue successfully created!</h4>
-            <p>Your line number is</p>
+            <h4>Request successfully created!</h4>
+            
             <h3>{user.line}</h3>More detail in
-        <Link to="/tickets" className="success-login-link">My tickets</Link> section</div>}
+        <Link to="/tickets" className="success-login-link">My requests</Link> section</div>}
         {
           created ? null :
           <form ref={form} className="ticket-form" onSubmit={handleSubmit}>
-          <input type="date" required min={minDate} placeholder="Select the date" value={date} onChange={(e)=> {setDate(e.target.value); modalHandle()}} name="lineDate"/>
-          <input type="text" required placeholder='select the time' value={selectedTime} onClick={()=> setTimeModal(true)} name="time"/>
-          {
-          timeModal ?
-            <div className="modal">
-              <Timing range={range} close={timeModalHandle} saveTime={saveTime} selectedTime={selectedTime} timeOptions={timeOptions} />
-            </div>
-            : null
-          }
-  
-           {/* <Select options={options} value={cat} onChange={(e)=> setCat(e.target.value)} /> */}
-          <select required value={cat} onChange={(e)=> setCat(e.target.value)} name="category">
-            <option hidden>Select the category</option>
-            <option>Oil</option>
-            <option>Engine issue</option>
-            <option>Wheel repair</option>
-            <option>Other</option>
+          <label className='text-sm font-semibold mt-4'>For which date you need the labor service?</label>
+          <input type="date" required min={minDate} placeholder="Select the date" value={date} onChange={(e)=> setDate(e.target.value)} name="date"/>
+          <label className='text-sm font-semibold mt-4'>For which time?</label>
+          <input type="time" required placeholder="Select the time" value={time} onChange={(e)=> setTime(e.target.value)} name="time"/>
+          <label className='text-sm font-semibold mt-4'>Select the service type</label>
+          <select required value={cat} onChange={(e)=> setCat(e.target.value)} name="category" className='py-3 pl-2' >
+            <option>Appliance Repair</option>
+            <option>Basic HVAC Maintenance</option>
+            <option>Carpentry</option>
+            <option>Deck and Fence Repair</option>
+            <option>Drywall and Plaster Repair</option>
+            <option>Electrical</option>
+            <option>Emergency Repairs</option>
+            <option>Flooring</option>
+            <option>Furniture Assembly</option>
+            <option>Gutter Repair and Cleaning</option>
+            <option>Home Insulation</option>
+            <option>Home Maintenance</option>
+            <option>Home Safety</option>
+            <option>Minor Landscaping</option>
+            <option>Painting</option>
+            <option>Plumbing</option>
+            <option>Pressure Washing</option>
+            <option>Small Plumbing and Electrical Jobs</option>
+            <option>Tiling</option>
+            <option>Window and Door Repair</option>
+            <option>Other (please, mark in description)</option>
           </select>
-          <input type="hidden" value={profileData.vendor} name="clientVendor" />
+          <label className='text-sm font-semibold mt-4'>Address line</label>
+          <input type="text" maxlength="50" required placeholder="Address line" value={address} onChange={(e)=> setAddress(e.target.value)} name="address"/>
+          <label className='text-sm font-semibold mt-4'>Please, mark the deadline</label>
+          <input type="date" required min={minDate} placeholder="Deadline" value={deadline} onChange={(e)=> setDeadline(e.target.value)} name="deadline"/>
+          <label className='text-sm font-semibold mt-4'>What is the maximum amount you are willing to pay?</label>
+          <input type="number" required min="0" max="1000000" placeholder="$" value={cost} onChange={(e)=> setCost(e.target.value)} name="cost"/>
+          <label className='text-sm font-semibold mt-4'>Please describe your needs in detail</label>
+          <textarea maxlength="400" required placeholder="Detail information" value={description} onChange={(e)=> setDescription(e.target.value)} name="description" rows="4" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'></textarea>
+          
+          {/* <input type="hidden" value={profileData.vendor} name="clientVendor" />
           <input type="hidden" value={profileData.model} name="clientModel" />
           <input type="hidden" value={profileData.plate} name="clientPlate" />
           <input type="hidden" value={profileData.company} name="clientCompany" />
@@ -146,22 +169,19 @@ const Ticket = ({user, myTickets, accounts}) => {
           <input type="hidden" value={user.displayName} name="userName" />
           <input type="hidden" value={user.email} name="userMail" />
           <input type="number" min="0" maxlength="10" required placeholder="Odometer (km)" value={odo} onChange={(e)=> setOdo(e.target.value)} name="odometer" />
-          <textarea name="message" type="text-area" maxlength="100" placeholder="Notes" value={note} onChange={(e)=> setNote(e.target.value)} />
-          {
-            !inLineCheking ? <button type="submit">Create</button>
-            : <p className="date-error">There is already request on selected date</p>
-          }
+          <textarea name="message" type="text-area" maxlength="100" placeholder="Notes" value={note} onChange={(e)=> setNote(e.target.value)} /> */}
+          <button className='mt-5 py-5 bg-sky-700 text-gray-200 text-lg hover:bg-sky-900' type="submit">Submit</button>
         </form>
         }
         
   
-        {
+        {/* {
             modal ?
             <div className="modal">
               <Queue inLineCheking={inLineCheking} date={date} user={user} close={modalHandle}/>
             </div>
             : null
-          }
+          } */}
           </div>
       }
 
