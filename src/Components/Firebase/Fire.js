@@ -1,13 +1,12 @@
 import firebase from 'firebase';
   
 const firebaseConfig = {
-  apiKey: "AIzaSyBKvdM5laqAWqoGEhZ-BMyPAxgoc1E4Aa4",
-  authDomain: "ticket-system-aa5a5.firebaseapp.com",
-  projectId: "ticket-system-aa5a5",
-  storageBucket: "ticket-system-aa5a5.appspot.com",
-  messagingSenderId: "189332080597",
-  appId: "1:189332080597:web:64953421ea6a274ef8df5c",
-  measurementId: "G-GTM8ZS2RN8"
+  apiKey: "AIzaSyDtRbwizM88CHr8XbdbgsYaor3SBXaXmwo",
+  authDomain: "laborer-6f0e6.firebaseapp.com",
+  projectId: "laborer-6f0e6",
+  storageBucket: "laborer-6f0e6.appspot.com",
+  messagingSenderId: "251387291264",
+  appId: "1:251387291264:web:b5a897a5d1f1711cb56865"
 };
     
 const fire = firebase.initializeApp(firebaseConfig);

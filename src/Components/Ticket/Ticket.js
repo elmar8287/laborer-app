@@ -113,7 +113,7 @@ const Ticket = ({user, myTickets, accounts}) => {
         </p> 
         :
         <div>
-        <h2 className='text-2xl font-extrabold'>Request form</h2>
+        <h2 className='text-3xl font-extrabold'>Request form</h2>
         {created && 
           <div className="success-login">
             <h4>Request successfully created!</h4>
@@ -123,7 +123,7 @@ const Ticket = ({user, myTickets, accounts}) => {
         {
           created ? null :
           <form ref={form} className="ticket-form" onSubmit={handleSubmit}>
-          <label className='text-sm font-semibold mt-4'>For which date you need the labor service?</label>
+          <label className='text-sm font-semibold mt-4'>For which date do you need the labor service?</label>
           <input type="date" required min={minDate} placeholder="Select the date" value={date} onChange={(e)=> setDate(e.target.value)} name="date"/>
           <label className='text-sm font-semibold mt-4'>For which time?</label>
           <input type="time" required placeholder="Select the time" value={time} onChange={(e)=> setTime(e.target.value)} name="time"/>
