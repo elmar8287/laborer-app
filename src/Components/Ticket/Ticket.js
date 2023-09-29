@@ -173,7 +173,7 @@ const Ticket = ({user, myTickets, accounts}) => {
           <input type="hidden" value={user.email} name="userMail" />
           <input type="number" min="0" maxlength="10" required placeholder="Odometer (km)" value={odo} onChange={(e)=> setOdo(e.target.value)} name="odometer" />
           <textarea name="message" type="text-area" maxlength="100" placeholder="Notes" value={note} onChange={(e)=> setNote(e.target.value)} /> */}
-          <button className='mt-5 py-5 bg-sky-700 text-gray-200 text-lg hover:bg-sky-900' type="submit">Submit</button>
+          <button className='mt-5 py-5 bg-green-700 text-gray-100 text-2xl hover:bg-green-500' type="submit">Submit</button>
         </form>
         }
         

@@ -5,7 +5,7 @@ import Account from '../Account/Account.js';
 const Home = ({ user, myTickets, accounts}) => {   
   const [haveAccout, setHaveAccount] = useState(false)
   return (
-    <div className="home">
+    <div className="home pb-10">
       {
         haveAccout ?
         <Account />
