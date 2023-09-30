@@ -45,12 +45,6 @@ export default ({handleLogout, user, myTickets}) => {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
-    const navigation = [
-        { title: "Home", path: "/" },
-        { title: "My requests", path: "/tickets" },
-        { title: "Account", path: "/account" }
-    ]
 
     useEffect(() => {
         document.onclick = (e) => {
@@ -96,6 +90,9 @@ export default ({handleLogout, user, myTickets}) => {
                         </li>
                         <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/tickets">My requests</Link> ({myTickets.filter(e => e.user===user.email).length})
+                        </li>
+                        <li className="text-gray-700 hover:text-gray-900">
+                        <Link to="/services">Services</Link>
                         </li>
                         <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/account">Account</Link>
