@@ -22,8 +22,8 @@ export default () => {
         desc: " Patching holes, cracks, and water damage in walls or ceilings.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Electrical        ",
+        desc: " Replacing light fixtures, outlets, switches, and troubleshooting electrical issues (for minor repairs).        "
     },
     {
         name: "xxx",
