@@ -13,6 +13,7 @@ import Navbar from '../Navbar/Navbar';
 import MyTickets from '../MyTickets/MyTickets';
 import firebase from 'firebase';
 import About from '../About/About';
+import Services from '../Services/Services';
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -159,6 +160,7 @@ const App = () => {
       }
       <Route path="/account" element={<Account user={user} accounts={accounts} />} />
       <Route path="/about" element={<About user={user} />} />
+      <Route path="/services" element={<Services />} />
       <Route path="/tickets" element={<MyTickets user={user} accounts={accounts} myTickets={myTickets}/>} />
       </Routes>
     </div>
