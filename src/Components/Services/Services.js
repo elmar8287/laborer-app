@@ -26,29 +26,61 @@ export default () => {
         desc: " Replacing light fixtures, outlets, switches, and troubleshooting electrical issues (for minor repairs).        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Emergency Repairs        ",
+        desc: " Responding to urgent issues like water leaks, electrical outages, or security breaches.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Flooring        ",
+        desc: " Repairing or replacing damaged flooring, including hardwood, laminate, tile, and vinyl.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Furniture Assembly        ",
+        desc: " Putting together flat-pack furniture and mounting shelves or cabinets.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Gutter Repair and Cleaning        ",
+        desc: " Clearing debris from gutters and repairing minor issues like leaks.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Home Insulation        ",
+        desc: " Adding or replacing insulation in attics, walls, and crawl spaces.        "
     },
     {
-        name: "xxx",
-        desc: "xxx"
+        name: "Home Maintenance        ",
+        desc: " Performing routine maintenance tasks like gutter cleaning, pressure washing, and roof repairs (minor).        "
     },
+    {
+      name: "Home Safety      ",
+      desc: " Installing smoke detectors, carbon monoxide detectors, and childproofing measures.      "
+  },
+  {
+    name: "Minor Landscaping    ",
+    desc: " Trimming bushes, planting flowers, and general yard maintenance.    "
+},
+{
+  name: "Painting  ",
+  desc: " Interior and exterior painting, including touch-ups and repainting walls or ceilings.  "
+},
+{
+  name: "Plumbing  ",
+  desc: " Fixing minor leaks, unclogging drains, replacing faucets, and installing new fixtures.  "
+},
+{
+  name: "Pressure Washing  ",
+  desc: " Cleaning driveways, decks, siding, and other surfaces with a pressure washer.  "
+},
+{
+  name: "Small Plumbing and Electrical Jobs  ",
+  desc: " Installing ceiling fans, light fixtures, and fixing minor plumbing issues like a running toilet.  "
+},
+{
+  name: "Tiling  ",
+  desc: " Installing or repairing ceramic, porcelain, or other types of tiles for floors, walls, and backsplashes.  "
+},
+{
+  name: "Window and Door Repair  ",
+  desc: " Adjusting or replacing hinges, handles, locks, and weatherstripping.  "
+},
   ]
 
   return (
@@ -61,7 +93,7 @@ export default () => {
               Handymen are typically skilled in a wide range of tasks and services related to home repair, maintenance, and improvement. Here is a list of common services that handymen often cover:
               </p>
           </div>
-          <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
+          <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto mb-10">
               <table className="w-full table-auto text-sm text-left">
                   <thead className="bg-gray-50 text-gray-600 font-medium border-b">
                       <tr>
