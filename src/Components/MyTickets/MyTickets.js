@@ -25,6 +25,14 @@ const MyTickets = ({user, myTickets, accounts}) => {
   
   const account = accounts.filter(e=>(e.email===user.email))
 
+  const count_total =(x)=> {
+    let sum = 0
+    for(let i=0; i<x.length; i++) {
+      sum = sum + Math.floor(x[i].cost)
+    }
+    return sum
+  }
+
   
   return (
     <div  className="my-tickets">
@@ -42,6 +50,9 @@ const MyTickets = ({user, myTickets, accounts}) => {
         <div className='bg-green-500 p-2 rounded-lg mx-2 text-sm w-[80px]'>
           Done
         </div>
+      </div>
+      <div className='my-5'>
+       <p className='font-bold'>Estimated budget summary is {count_total(list)} $</p>
       </div>
       <ul>
       {list && list.length>0 ?
@@ -74,6 +85,12 @@ const MyTickets = ({user, myTickets, accounts}) => {
             <p>Address: {ticket.address}</p>
             <p>Deadline: {ticket.deadline}</p>
             <p>Description: {ticket.description}</p>
+            {
+              ticket.comment.map(e=>(
+                <p>{e}</p>
+              ))
+            }
+            <p>Comment: {ticket.comment}</p>
             <p className='text-[8px]'>Request reated date: {ticket.created}</p>
           </li>
         ))

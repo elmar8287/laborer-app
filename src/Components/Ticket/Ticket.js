@@ -21,6 +21,7 @@ const Ticket = ({user, myTickets, accounts}) => {
   const [zip, setZip] = useState("");
   const [lastAdded, setLastAdded] = useState("")
   const [showLast, setShowLast] = useState("")
+  const [comment, setComment] = []
 
   let minDate = moment().format('YYYY-MM-D');
   let datedate = moment().format('YYYY-MM-D HH:mm:ss');
@@ -47,6 +48,7 @@ const Ticket = ({user, myTickets, accounts}) => {
         zip: zip,
         created: datedate,
         status: "New",
+        comment: comment,
         
       }).then((docRef) => {
         const docId = docRef.id;
