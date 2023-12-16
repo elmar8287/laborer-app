@@ -1,4 +1,4 @@
-import Reac, {useState} from 'react';
+import React, {useState} from 'react';
 import Ticket from '../Ticket/Ticket.js';
 import Account from '../Account/Account.js';
 

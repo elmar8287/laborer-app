@@ -85,11 +85,11 @@ const MyTickets = ({user, myTickets, accounts}) => {
             <p>Address: {ticket.address}</p>
             <p>Deadline: {ticket.deadline}</p>
             <p>Description: {ticket.description}</p>
-            {
+            {/* {
               ticket.comment.map(e=>(
                 <p>{e}</p>
               ))
-            }
+            } */}
             <p>Comment: {ticket.comment}</p>
             <p className='text-[8px]'>Request reated date: {ticket.created}</p>
           </li>
