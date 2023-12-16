@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import Ticket from '../Ticket/Ticket.js';
 import Account from '../Account/Account.js';
+import Hiro from './Hiro.js';
 
 const Home = ({ user, myTickets, accounts}) => {   
   const [haveAccout, setHaveAccount] = useState(false)
   return (
-    <div className="home pb-10">
+    <div className="pb-10">
       {
         haveAccout ?
         <Account />
         :
-        <Ticket user={user} myTickets={myTickets} accounts={accounts} />
+        <Hiro user={user} myTickets={myTickets} accounts={accounts} />
       }
     </div>
   );

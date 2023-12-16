@@ -33,16 +33,15 @@
 // }
 
 // export default Navbar;
-import React from 'react';
 import {
-  Link
+  Link, useLocation
 } from 'react-router-dom';
-import { useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 
 const logo = require("../../images/logo-laborer-app.png")
 
-export default ({handleLogout, user, myTickets}) => {
-
+const Navbar = ({accounts, handleLogout, user, myTickets}) => {
+    const location = useLocation()
     const [state, setState] = useState(false)
 
 
@@ -53,9 +52,14 @@ export default ({handleLogout, user, myTickets}) => {
         };
     }, [])
 
+    
     return (
+        <div>
+        {
+            location.pathname!=="/login" ?
         <nav className={`bg-white pb-5 md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
-            <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+           
+                    <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-2 md:block">
                     <a href="#">
                         <img
@@ -85,40 +89,78 @@ export default ({handleLogout, user, myTickets}) => {
                 </div>
                 <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
                     <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                        <li className="text-gray-700 hover:text-gray-900">
+                    <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/">Home</Link>
                         </li>
-                        <li className="text-gray-700 hover:text-gray-900">
+                        {
+                            user ?
+                            <li className="text-gray-700 hover:text-gray-900 font-semibold text-green-500">
+                        <Link to="/request">New Request</Link>
+                        </li>
+                        : null
+                        }
+                        
+                        {
+                            user ?
+                            <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/tickets">My requests</Link> ({myTickets.filter(e => e.user===user.email).length})
                         </li>
+                        :null
+                        }
                         <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/services">Services</Link>
                         </li>
-                        <li className="text-gray-700 hover:text-gray-900">
+                        {
+                            user ?
+                            <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/account">Account</Link>
                         </li>
+                        : null
+                        }
+                        
                     </ul>
                     <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
                     {
           user ?
           <div className="avatar">
-            <h2>Welcome, <span className="user-info text-orange-500 font-extrabold">{user.displayName ? user.displayName : user.email}</span></h2>
+            <h2 className="user-info text-orange-500 font-extrabold">Welcome, {user.displayName ? user.displayName : user.email}</h2>
             {
               user.photoURL ? <img src={user.photoURL} alt="avatar"/> : <p> </p>
             }
           </div>
           :
-          <h2>Welcome</h2>
+          null
         }
-                        <Link to="/" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex " onClick={handleLogout}>
-                            Logout
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                            </svg>
-                        </Link>
+
+        {
+            user ?
+            <Link to="/" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex " onClick={handleLogout}>
+            Logout
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+            </svg>
+            </Link>
+            :
+            <Link to="/login" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex " onClick={handleLogout}>
+            Login
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+            </svg>
+            </Link>
+
+
+        }
+                       
                     </div>
                 </div>
             </div>
+                
+            
         </nav>
+        : null
+            }
+            </div>
     )
 }
+
+export default Navbar;

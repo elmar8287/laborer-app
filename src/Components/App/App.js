@@ -14,6 +14,8 @@ import MyTickets from '../MyTickets/MyTickets';
 import firebase from 'firebase';
 import About from '../About/About';
 import Services from '../Services/Services';
+import Ticket from '../Ticket/Ticket';
+import Hiro from '../Home/Hiro';
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -132,19 +134,22 @@ const App = () => {
     <Router>
     <div className="App">
     {
-      user && <Navbar handleLogout={handleLogout} user={user} myTickets={myTickets}/>
+      <Navbar handleLogout={handleLogout} accounts={accounts} user={user} myTickets={myTickets}/>
     }
 
       <Routes>
       {
         user ? (
-          <Route path="/" element={<Home
+          <Route path="/" element={<Hiro
             user={user}
             myTickets={myTickets}
             accounts={accounts}
           />} />
         ) : (
-          <Route path="/" element={<Login
+          <Route path="/" element={<Hiro />} />
+        )
+      }
+      <Route path="/login" element={<Login
             email={email}
             setEmail={setEmail}
             password={password} 
@@ -156,9 +161,8 @@ const App = () => {
             emailError={emailError}
             passwordError={passwordError}
         />} />
-        )
-      }
       <Route path="/account" element={<Account user={user} accounts={accounts} />} />
+      <Route path="/request" element={<Ticket user={user} myTickets={myTickets} accounts={accounts} />} />
       <Route path="/about" element={<About user={user} />} />
       <Route path="/services" element={<Services />} />
       <Route path="/tickets" element={<MyTickets user={user} accounts={accounts} myTickets={myTickets}/>} />

@@ -21,7 +21,7 @@ const Ticket = ({user, myTickets, accounts}) => {
   const [zip, setZip] = useState("");
   const [lastAdded, setLastAdded] = useState("")
   const [showLast, setShowLast] = useState("")
-  const [comment, setComment] = []
+  const [comment, setComment] = ["No comments"]
 
   let minDate = moment().format('YYYY-MM-D');
   let datedate = moment().format('YYYY-MM-D HH:mm:ss');
@@ -64,7 +64,6 @@ const Ticket = ({user, myTickets, accounts}) => {
       setDescription("")
       setCost("")
       setZip()
-      setComment([])
  
   };
 
@@ -113,7 +112,7 @@ const Ticket = ({user, myTickets, accounts}) => {
   const profileData = accounts.filter(e => e.user === user.email)
 
   return (
-    <div className="ticket">
+    <div className="ticket bg-gray-200">
       {
         profileData.length===0 ? 
         <div>
@@ -172,7 +171,7 @@ const Ticket = ({user, myTickets, accounts}) => {
           <input type="number" required min="0" max="1000000" placeholder="$" value={cost} onChange={(e)=> setCost(e.target.value)} name="cost"/>
           <label className='text-sm font-semibold mt-4'>Please describe your needs in detail</label>
           <textarea maxlength="400" required placeholder="Detail information" value={description} onChange={(e)=> setDescription(e.target.value)} name="description" rows="4" className='block p-2.5 w-full text-md text-gray-900 bg-gray-150 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'></textarea>
-          <input type="hidden" value={comment} name="comment" />
+          {/* <input type="hidden" value={comment} name="comment" /> */}
           {/* <input type="hidden" value={profileData.vendor} name="clientVendor" />
           <input type="hidden" value={profileData.model} name="clientModel" />
           <input type="hidden" value={profileData.plate} name="clientPlate" />

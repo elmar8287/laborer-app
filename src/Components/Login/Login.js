@@ -1,12 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import firebase from 'firebase';
 import "../App/App.css"
 
 const logo = require("../../images/logo-laborer-app.png")
 
 const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount, emailError, passwordError}) => {
+  const navigate = useNavigate()
   const provider = new firebase.auth.GoogleAuthProvider();
-
+  const handleResetToHomePage = () => {
+    // Use the push method to navigate to the home page
+    navigate('/');
+  };
   return (
     <section className="login">
 
@@ -40,12 +45,12 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
           {
             !hasAccount ? (
               <>
-                <button type="button" onClick={handleLogin} className='p-3 bg-green-400'>Login</button>
+                <button type="button" onClick={e=> {handleLogin(); handleResetToHomePage()}} className='p-3 bg-green-400'>Login</button>
                 <p>Not registrated? <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
               </>
             ) : (
               <>
-              <button  className='p-3 bg-orange-400' type="button" onClick={handleSignup}>Sign Up</button>
+              <button  className='p-3 bg-orange-400' type="button" onClick={e=> {handleSignup(); handleResetToHomePage()}}>Sign Up</button>
               <p>Already registrated? <span className='text-green-500' onClick={() => setHasAccount(!hasAccount)}>Login</span></p>
             </>
             )

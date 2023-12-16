@@ -22,7 +22,7 @@
   margin-bottom: 5px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(240, 237, 237);
+  background-color: rgb(254, 254, 254);
 }
 
 .success-login {
@@ -76,6 +76,6 @@
     margin-bottom: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(240, 237, 237);
+    background-color: rgb(255, 255, 255);
   }
 }

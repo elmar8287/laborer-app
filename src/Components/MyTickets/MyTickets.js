@@ -43,14 +43,14 @@ const MyTickets = ({user, myTickets, accounts}) => {
         <span className="clear-filter" onClick={filterDate && getFilter}>Filter</span>
         <span className="clear-filter" onClick={filtering}>Clear</span>
       </div>
-      <div className='p-5 flex flex-rows justify-center'>
+      {/* <div className='p-5 flex flex-rows justify-center'>
         <div className='bg-orange-500 p-2 rounded-lg mx-2 text-sm'>
           Pending
         </div>
         <div className='bg-green-500 p-2 rounded-lg mx-2 text-sm w-[80px]'>
           Done
         </div>
-      </div>
+      </div> */}
       <div className='my-5'>
        <p className='font-bold'>Estimated budget summary is {count_total(list)} $</p>
       </div>
@@ -85,12 +85,20 @@ const MyTickets = ({user, myTickets, accounts}) => {
             <p>Address: {ticket.address}</p>
             <p>Deadline: {ticket.deadline}</p>
             <p>Description: {ticket.description}</p>
+            {
+              ticket.status !== "New" ?
+              <p className='text-green-500 font-extrabold'>Status: Done</p>
+              :
+              <p className='text-orange-500 font-extrabold'>Status: Pending</p>
+            }
+            
             {/* {
+            ticket.comment && ticket.comment.length>0 ?
               ticket.comment.map(e=>(
                 <p>{e}</p>
-              ))
+              )) : null
             } */}
-            <p>Comment: {ticket.comment}</p>
+            {/* <p>Comment: {user.user} {ticket.comment}</p> */}
             <p className='text-[8px]'>Request reated date: {ticket.created}</p>
           </li>
         ))
