@@ -61,10 +61,10 @@ const Navbar = ({accounts, handleLogout, user, myTickets}) => {
            
                     <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-2 md:block">
-                    <a href="#">
+                    <a href="/">
                         <img
                             src={logo}
-                            width={100}
+                            width={70}
                             height={30}
                             alt="Float UI logo"
                         />
