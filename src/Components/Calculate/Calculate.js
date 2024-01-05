@@ -11,7 +11,7 @@ const Calculate = () => {
                   </p>
               </div>
               <div className="mt-4">
-                  <a href="javascript:void(0)" className="inline-block py-2 px-4 text-gray-800 font-semibold bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-full">
+                  <a href="javascript:void(0)" className="inline-block py-3 px-6 text-xl text-gray-800 font-semibold bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-full">
                      Book Online
                   </a>
               </div>

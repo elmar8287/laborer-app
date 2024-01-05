@@ -11,10 +11,10 @@ const Logo = () => {
           <div className="max-w-screen-xl mx-auto px-4 md:px-8">
               <div className="max-w-xl mx-auto text-center">
                   <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                  What do we repair?
+                  Appliance Brands We Fix
                   </h3>
                   <p className="text-gray-600 mt-3">
-                  Our services cover a wide range of appliances, including refrigerators, washers, dryers, ovens, and more. From repairs and maintenance to installations, our expert technicians deliver top-notch solutions. We strive for fast turnarounds and customer satisfaction. Leave your appliance worries to us! We repair most popular brands.
+                   From repairs and maintenance to installations, our expert technicians deliver top-notch solutions. We strive for fast turnarounds and customer satisfaction. Leave your appliance worries to us! We repair most popular brands.
                   </p>
               </div>
               <div className="mt-12 flex justify-center">
