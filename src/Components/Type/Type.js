@@ -1,5 +1,11 @@
 const ref = require("./ref.webp")
 const washer = require("./washer.webp")
+const dishwasher = require("./dishwasher.webp")
+const dryer = require("./dryer.webp")
+const oven = require("./oven.webp")
+const freez = require("./freez.webp")
+const cook = require("./cook.webp")
+const micro = require("./micro.webp")
 
 const Type = () => {
 
@@ -15,25 +21,35 @@ const Type = () => {
           title: "Estimated Labor Fee $150 - $270"
       },
       {
-          avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          name: "Brown Luis",
-          title: "Full stack engineer"
+          avatar: dishwasher,
+          name: "Dishwasher Repair",
+          title: "Estimated Labor Fee $140 - $180"
       },
       {
-          avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          name: "Lysa sandiago",
-          title: "Head of designers"
+          avatar: dryer,
+          name: "Dryer Repair",
+          title: "Estimated Labor Fee $140 - $230"
       },
       {
-          avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          name: "Daniel martin",
-          title: "Product designer"
+          avatar: freez,
+          name: "Freezer Repair",
+          title: "Estimated Labor Fee $160 - $280"
       },
       {
-          avatar: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-          name: "Vicky tanson",
-          title: "Product manager"
+          avatar: oven,
+          name: "Oven Repair",
+          title: "Estimated Labor Fee $180 - $320"
       },
+      {
+        avatar: micro,
+        name: "Microwave Repair",
+        title: "Estimated Labor Fee $140 - $180"
+    },
+    {
+      avatar: cook,
+      name: "Stove / Cooktop Repair",
+      title: "Estimated Labor Fee $140 - $280"
+  },
   ]
 
   return (
@@ -44,7 +60,7 @@ const Type = () => {
                   What Appliances Do We Repair?
                   </h3>
                   <p className="text-gray-600 mt-3">
-                  Our services cover a wide range of appliances, including refrigerators, washers, dryers, ovens, and more.
+                  Our services cover a wide range of appliances, including refrigerators, washers, dryers, ovens, and more (the costs are mentioned without spareparts, which could be on-demand order).
                   </p>
               </div>
               <div className="mt-12">
@@ -55,7 +71,7 @@ const Type = () => {
                                   <div className="w-full h-60 sm:h-52 md:h-56 shadow-md rounded-xl flex py-3 justify-center">
                                         <img
                                             src={item.avatar}
-                                            className=" h-full object-cover object-center "
+                                            className="p-3 h-full object-cover object-center "
                                             alt=""
                                         />
                                     </div>

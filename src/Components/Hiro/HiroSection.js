@@ -2,6 +2,7 @@ import "./Hiro.css"
 import Logo from "../Logo/Logo"
 import Calculate from "../Calculate/Calculate"
 import Type from "../Type/Type"
+import Online from "../Online/Online"
 
 const pic = require("./pic.PNG")
 
@@ -44,6 +45,7 @@ const HiroSection = () => {
                     
                 </div>
                 <div className="mt-14 px-4 md:px-8">
+                  <Online />
                   <Type />
                     <Logo />
                     <Calculate />

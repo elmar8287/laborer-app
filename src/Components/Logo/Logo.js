@@ -14,7 +14,7 @@ const Logo = () => {
                   Appliance Brands We Fix
                   </h3>
                   <p className="text-gray-600 mt-3">
-                   From repairs and maintenance to installations, our expert technicians deliver top-notch solutions. We strive for fast turnarounds and customer satisfaction. Leave your appliance worries to us! We repair most popular brands.
+                  Leave your appliance worries to us! We repair most popular brands.
                   </p>
               </div>
               <div className="mt-12 flex justify-center">
