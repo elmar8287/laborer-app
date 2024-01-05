@@ -6,7 +6,7 @@ const Online = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
           <div className="relative z-10 gap-5 items-center lg:flex">
               <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
-                  <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
+                  <h3 className="text-3xl text-gray-800 font-extrabold md:text-4xl">
                   By Logging in, you will receive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">a 15% discount on your first diagnosis.</span>
                   </h3>
                   
