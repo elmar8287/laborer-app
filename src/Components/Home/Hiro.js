@@ -1,7 +1,11 @@
 import React from 'react';
+import HiroSection from '../Hiro/HiroSection';
 const photo = require("./hiro.webp")
 function Hiro({user}) {
   return (
+
+    <>
+    <HiroSection />
     <section className="py-14">
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
@@ -27,6 +31,7 @@ function Hiro({user}) {
                 </div>
             </div>
         </section>
+        </>
   );
 }
 

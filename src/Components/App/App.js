@@ -16,6 +16,8 @@ import About from '../About/About';
 import Services from '../Services/Services';
 import Ticket from '../Ticket/Ticket';
 import Hiro from '../Home/Hiro';
+import BottomNav from '../BottomNav/BottomNav';
+import HiroSection from '../Hiro/HiroSection';
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -133,6 +135,8 @@ const App = () => {
   return (
     <Router>
     <div className="App">
+      
+      {/* <BottomNav /> */}
     {
       <Navbar handleLogout={handleLogout} accounts={accounts} user={user} myTickets={myTickets}/>
     }
