@@ -31,7 +31,7 @@ const Online = () => {
                   <img 
                       src={discount} 
                       alt="discount-appliance-repair" 
-                      className="w-full rounded-full" 
+                      className="w-full rounded-full shadow-2xl hover:shadow-lg" 
                   />
               </div>
           </div>

@@ -1,8 +1,8 @@
 const Book = () => {
 
   return (
-      <section className="py-14 max-w-screen-xl mx-auto">
-          <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-blue-600 md:px-8 md:mx-8">
+      <section className="py-14 max-w-screen-xl mx-auto ">
+          <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-blue-600 md:px-8 md:mx-8 shadow-2xl">
               <div className="relative z-10 max-w-2xl mx-auto sm:text-center">
                   <div className="space-y-3">
 
@@ -16,7 +16,7 @@ const Book = () => {
                   <div className="mt-6">
                       <form
                           onSubmit={(e) => e.preventDefault()}
-                          className="flex flex-col items-center justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
+                          className="shadow-2xl flex flex-col items-center justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
                           <input
                               type="text"
                               placeholder="Enter your name"
