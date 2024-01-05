@@ -9,17 +9,23 @@ const Online = () => {
                   <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
                   By Logging In, you will receive <span className="text-indigo-600">a 15% discount on your first diagnosis.</span>
                   </h3>
-                  <p className="text-gray-500 leading-relaxed mt-3">
-                      Nam erat risus, sodales sit amet lobortis ut, finibus eget metus. Cras aliquam ante ut tortor posuere feugiat. Duis sodales nisi id porta lacinia.
-                  </p>
+                  
                   <a
                       className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
                       href="javascript:void()">
-                      Try it out
+                      Login
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                   </a>
+                  <a
+                      className="ml-2 mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+                      href="javascript:void()">
+                      Referral program
+                  </a>
+                  <p className="text-gray-500 leading-relaxed mt-3">
+                  We ask 100$ for a service call, which means coming to your address and making a full diagnosis of your appliance. We provide you with the issue reason and offer the repair. If you discard the repair, then the diagnosis fee will be charged, otherwise, you will pay only the repair fee.
+                  </p>
               </div>
               <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                   <img 
