@@ -38,7 +38,7 @@ import {
 } from 'react-router-dom';
 import { React, useEffect, useState } from 'react'
 
-const logo = require("../../images/logo-laborer-app.png")
+const logo = require("./logo.PNG")
 
 const Navbar = ({accounts, handleLogout, user, myTickets}) => {
     const location = useLocation()
