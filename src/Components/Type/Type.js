@@ -7,12 +7,12 @@ const Type = () => {
       {
           avatar: ref,
           name: "Refrigerator Repair",
-          title: "Labor fee 160$-250$"
+          title: "Estimated Labor Fee $160 - $360"
       },
       {
           avatar: washer,
-          name: "Washer",
-          title: "Software engineer"
+          name: "Washer Repair",
+          title: "Estimated Labor Fee $150 - $270"
       },
       {
           avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
