@@ -60,7 +60,7 @@ const Type = () => {
                   What Appliances Do We Repair?
                   </h3>
                   <p className="text-gray-600 mt-3">
-                  Our services cover a wide range of appliances, including refrigerators, washers, dryers, ovens, and more (the costs are mentioned without spareparts, which could be on-demand order).
+                  Our fees are around the average on market, but the main goal is to make our clients happy. The costs are mentioned without spareparts, which could be on-demand order. The service call also will not be charged.
                   </p>
               </div>
               <div className="mt-12">
