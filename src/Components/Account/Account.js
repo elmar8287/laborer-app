@@ -55,7 +55,7 @@ const Account = ({user, accounts}) => {
       <h2 className='text-orange-500 font-extrabold text-3xl pb-3'>Account details</h2>
       {
         saved ? <p className="success text-gra-700 bg-green-200 px-5">Well done! Let us start with the
-        <Link to="/" className='text-orange-500 font-extrabold'> Home </Link>
+        <Link to="/request" className='text-orange-500 font-extrabold'> New Appointment </Link>
         page</p> : !saved
       }
       {
@@ -80,7 +80,6 @@ const Account = ({user, accounts}) => {
             <p>Name: <span className='font-extrabold'>{e.name}</span></p>
             <p>Surname: <span className='font-extrabold'>{e.surname}</span></p>
             <p>Phone number: <span className='font-extrabold'>{e.phone}</span></p>
-            <p>Email address: <span className='font-extrabold'>{e.email}</span></p>
             <p>State: <span className='font-extrabold'>{e.state}</span></p>
             <p>Address: <span className='font-extrabold'>{e.address}</span></p>
           </div>

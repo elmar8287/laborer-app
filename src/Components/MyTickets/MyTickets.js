@@ -63,7 +63,7 @@ const MyTickets = ({ user, myTickets, accounts }) => {
           list
             .filter((e) => e.user === user.email)
             .map((ticket) => (
-              <li className="flex flex-col max-w-md rounded-lg shadow-lg m-2">
+              <li className="flex flex-col max-w-lg rounded-lg shadow-lg md:m-2">
                 <div
                   className={
                     ticket.status === "Done"
@@ -88,7 +88,10 @@ const MyTickets = ({ user, myTickets, accounts }) => {
                 </p>
                 <p>Address: {ticket.address}</p>
                 <p>Address: {ticket.phone}</p>
-                <p>Details: {ticket.description}</p>
+                <div className="text-wrap">
+                <p className="text-wrap">Details: {ticket.description}</p>
+                </div>
+                
                 {ticket.status !== "New" ? (
                   <p className="text-green-500 font-extrabold">Status: Done</p>
                 ) : (
@@ -96,7 +99,7 @@ const MyTickets = ({ user, myTickets, accounts }) => {
                     Status: Pending
                   </p>
                 )}
-                <p className="text-[8px]">
+                <p className="text-[10px]">
                   Appointment created date: {ticket.created}
                 </p>
                 </div>

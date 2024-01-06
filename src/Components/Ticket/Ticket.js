@@ -6,6 +6,8 @@ import moment from "moment";
 import "./Ticket.css";
 import { BsCheckCircleFill } from "react-icons/bs";
 
+const award = require("./award.PNG")
+
 const Ticket = ({ user, myTickets, accounts }) => {
   
   const [date, setDate] = useState("");
@@ -79,21 +81,22 @@ const Ticket = ({ user, myTickets, accounts }) => {
   const profileData = accounts.filter((e) => e.user === user.email);
 
   return (
-    <div className="ticket  bg-blue-200">
+    <div className="ticket bg-blue-200">
       {profileData.length === 0 ? (
         <div>
-          <h2 className="text-orange-500 font-extrabold text-3xl">
+          <h2 className="text-gray-900 font-extrabold text-3xl">
             Congratulations!
           </h2>
           <p>
             This is your first login! Before you start, we kindly ask you to
             fill the information in the
-            <Link to="/account" className="text-orange-500 font-extrabold">
-              {" "}
-              Account
+            <Link to="/account" className="text-orange-700 underline font-extrabold">
+            {" "}Account
             </Link>{" "}
             section.
           </p>
+          <p className="mt-2">You have also got 15% discount on your first diagnosis (service call)!</p>
+          <img src={award} alt="award-discount" className="rounded-lg mt-5 shadow-2xl" />
         </div>
       ) : (
         <div>

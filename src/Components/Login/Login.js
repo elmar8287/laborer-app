@@ -10,7 +10,7 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
   const provider = new firebase.auth.GoogleAuthProvider();
   const handleResetToHomePage = () => {
     // Use the push method to navigate to the home page
-    navigate('/');
+    navigate('/request');
   };
   return (
     <section className="login">
@@ -19,7 +19,7 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
       <div className="app-title flex justify-center">
       {/* <h2>Laborer</h2>
       <p>save your time</p> */}
-      <img src={logo} className='w-[200px] rounded-lg' />
+      <img src={logo} className='w-[200px] rounded-lg' alt="logo-appliance-repair"/>
       </div>
         <input
           maxlength="50"
