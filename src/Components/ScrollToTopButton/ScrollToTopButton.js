@@ -18,7 +18,7 @@ function ScrollToTopButton() {
   window.addEventListener('scroll', checkScrollTop);
 
   return (
-    <IoLogoWhatsapp className="scrollTop" style={{ height: 100, width: 50, display: showScroll ? 'flex' : 'none' }} />
+    <IoLogoWhatsapp className="scrollTop" style={{ height: 130, width: 60, display: showScroll ? 'flex' : 'none' }} />
   );
 }
 

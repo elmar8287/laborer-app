@@ -21,8 +21,8 @@ const Refferal = () => {
                   <p className="text-gray-500 leading-relaxed mt-3">
                   Getting referral awards is simple! Share the love for our reliable appliance repair services with friends and family. When they schedule a repair with us, both you and your referral enjoy exclusive rewards as a token of our appreciation. It's a win-win! Just refer, and reap the benefits. Join our referral program today, and start earning for every successful referral!
                   </p>
-                  <h3 className="text-3xl text-gray-800 font-extrabold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">Your awards</h3> <span className="text-3xl text-gray-800 font-extrabold md:text-4xl">$25 coupon</span>
-                  <h3 className="mt-2 text-3xl text-gray-800 font-extrabold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">Referral awards</h3> <span className="text-3xl text-gray-800 font-extrabold md:text-4xl">10% discount for labor fee </span>
+                  <h3 className="text-3xl text-gray-800 font-extrabold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">Your awards</h3> <span className="text-2xl text-gray-800 font-extrabold md:text-3xl">$25 coupon</span>
+                  <h3 className="mt-2 text-3xl text-gray-800 font-extrabold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">Referral awards</h3> <span className="text-2xl text-gray-800 font-extrabold md:text-3xl">10% discount for labor fee </span>
               </div>
               <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                   <img 
