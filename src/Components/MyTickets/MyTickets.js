@@ -1,113 +1,113 @@
-import React, {useState, useEffect} from 'react';
-import "./MyTickets.css"
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./MyTickets.css";
 
-const MyTickets = ({user, myTickets, accounts}) => {
-  const [filterDate, setfilterDate] = useState()
-  const [list, setList] = useState("")
+const MyTickets = ({ user, myTickets, accounts }) => {
+  const [filterDate, setfilterDate] = useState();
+  const [list, setList] = useState("");
 
   const formatDate = (e) => {
-    const rawDate = e.target.value
-    const formatedDate =rawDate.split('/').reverse().join("-")
-    setfilterDate(formatedDate)
-  }
+    const rawDate = e.target.value;
+    const formatedDate = rawDate.split("/").reverse().join("-");
+    setfilterDate(formatedDate);
+  };
 
-  const filtering= () => {
-    setList(myTickets)
-  }
+  const filtering = () => {
+    setList(myTickets);
+  };
 
   const getFilter = () => {
-    setList(myTickets.filter(e => e.date===filterDate))
-  }
+    setList(myTickets.filter((e) => e.date === filterDate));
+  };
 
-  useEffect(()=> {
-    filtering()
-  }, [])
-  
-  const account = accounts.filter(e=>(e.email===user.email))
+  useEffect(() => {
+    filtering();
+  }, []);
 
-  const count_total =(x)=> {
-    let sum = 0
-    for(let i=0; i<x.length; i++) {
-      sum = sum + Math.floor(x[i].cost)
+  const account = accounts.filter((e) => e.email === user.email);
+
+  const count_total = (x) => {
+    let sum = 0;
+    for (let i = 0; i < x.length; i++) {
+      sum = sum + Math.floor(x[i].cost);
     }
-    return sum
-  }
+    return sum;
+  };
 
-  
   return (
-    <div  className="my-tickets">
-      <h3>You have in total {myTickets.filter(e => e.user===user.email).length} requests</h3>
-      <div className="mytickets-filter">
+    <div className="my-tickets p-2">
+      <h3 className="ml-2">
+        There are {" "}
+        {myTickets.filter((e) => e.user === user.email).length} appointment(s)
+      </h3>
+      <div className="mytickets-filter ml-2">
         <span>Filter by date: </span>
-        <input type="date" value={filterDate} onChange={e => formatDate(e)} />
-        <span className="clear-filter" onClick={filterDate && getFilter}>Filter</span>
-        <span className="clear-filter" onClick={filtering}>Clear</span>
+        <input type="date" value={filterDate} onChange={(e) => formatDate(e)} />
+        <span className="clear-filter" onClick={filterDate && getFilter}>
+          Filter
+        </span>
+        <span className="clear-filter" onClick={filtering}>
+          Clear
+        </span>
       </div>
-      {/* <div className='p-5 flex flex-rows justify-center'>
-        <div className='bg-orange-500 p-2 rounded-lg mx-2 text-sm'>
-          Pending
-        </div>
-        <div className='bg-green-500 p-2 rounded-lg mx-2 text-sm w-[80px]'>
-          Done
-        </div>
-      </div> */}
-      <div className='my-5'>
-       <p className='font-bold'>Estimated budget summary is {count_total(list)} $</p>
-      </div>
-      <ul>
-      {list && list.length>0 ?
-        list
-        .filter(e => (e.user===user.email))
-        .map(ticket=> (
 
-          <li>
-            <div className={
-              ticket.status === "Done" ? "ticket-view bg-green-500" : "ticket-view bg-orange-500"
-            }>
-              <p>Need: {ticket.cat}</p>
-              <p>Budget: {ticket.cost}$</p>
-            </div>
-            {
-              account.map(e=> (
-                <div>
-                  <p>Name: {e.name}, {e.surname}</p>
-                  <p>Phone: {e.phone}</p>
-                  <p>Email: {e.email}</p>
+      <div className="my-10">
+      <Link to="/request"
+              className="py-4 px-4 ml-2 text-center text-lg text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none"
+            >
+              Book New Appointment
+            </Link>
+      </div>
+      <ul className="grid md:grid-cols-3 justify-center">
+        {list && list.length > 0 ? (
+          list
+            .filter((e) => e.user === user.email)
+            .map((ticket) => (
+              <li className="flex flex-col max-w-md rounded-lg shadow-lg m-2">
+                <div
+                  className={
+                    ticket.status === "Done"
+                      ? "ticket-view bg-green-500 text-lg p-2 font-bold rounded-tl-lg rounded-tr-lg"
+                      : "ticket-view bg-orange-500 text-lg p-2 font-bold rounded-tl-lg rounded-tr-lg"
+                  }
+                >
+                  <p>{ticket.cat} repair</p>
                 </div>
-              ))
-            }
-                  
-       
-            
-           
-            <p>Requested for: {ticket.date} | {ticket.time}</p>
-            <p>ZIP: {ticket.zip}</p>
-            <p>Address: {ticket.address}</p>
-            <p>Deadline: {ticket.deadline}</p>
-            <p>Description: {ticket.description}</p>
-            {
-              ticket.status !== "New" ?
-              <p className='text-green-500 font-extrabold'>Status: Done</p>
-              :
-              <p className='text-orange-500 font-extrabold'>Status: Pending</p>
-            }
-            
-            {/* {
-            ticket.comment && ticket.comment.length>0 ?
-              ticket.comment.map(e=>(
-                <p>{e}</p>
-              )) : null
-            } */}
-            {/* <p>Comment: {user.user} {ticket.comment}</p> */}
-            <p className='text-[8px]'>Request reated date: {ticket.created}</p>
-          </li>
-        ))
-        :
-        <p>No requests found</p>
-      }
+                {account.map((e) => (
+                  <div className="p-2">
+                    <p>
+                      Name: {e.name}, {e.surname}
+                    </p>
+                    <p>Phone: {e.phone}</p>
+                    <p>Email: {e.email}</p>
+                  </div>
+                ))}
+                <div  className="p-2">
+                <p>
+                  Appointment on: {ticket.date} | {ticket.time}
+                </p>
+                <p>Address: {ticket.address}</p>
+                <p>Address: {ticket.phone}</p>
+                <p>Details: {ticket.description}</p>
+                {ticket.status !== "New" ? (
+                  <p className="text-green-500 font-extrabold">Status: Done</p>
+                ) : (
+                  <p className="text-orange-500 font-extrabold">
+                    Status: Pending
+                  </p>
+                )}
+                <p className="text-[8px]">
+                  Appointment created date: {ticket.created}
+                </p>
+                </div>
+              </li>
+            ))
+        ) : (
+          <p>No appointments found</p>
+        )}
       </ul>
     </div>
   );
-}
+};
 
 export default MyTickets;

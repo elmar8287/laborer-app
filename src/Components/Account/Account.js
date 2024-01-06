@@ -51,7 +51,7 @@ const Account = ({user, accounts}) => {
 
   return (
     <div className="profile-info mb-10">
-      <Link to="/" className="nav-link">Home page</Link>
+      <Link to="/request" className="nav-link">New Appointment</Link>
       <h2 className='text-orange-500 font-extrabold text-3xl pb-3'>Account details</h2>
       {
         saved ? <p className="success text-gra-700 bg-green-200 px-5">Well done! Let us start with the

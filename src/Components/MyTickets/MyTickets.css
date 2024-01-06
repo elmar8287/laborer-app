@@ -1,9 +1,9 @@
-.my-tickets {
+/* .my-tickets {
   text-align: center;
   overflow-wrap: break-word;
-}
+} */
 
-.my-tickets li {
+/* .my-tickets li {
   border: solid rgb(3, 3, 3);
   width: 96%;
   margin: 0 3% 1% 3%;
@@ -12,9 +12,9 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.my-tickets li p {
+/* .my-tickets li p {
   padding: 2px;
 }
 
@@ -26,7 +26,7 @@
   color: white;
   font-weight: 700;
   font-size: 12px;
-}
+} */
 
 .mytickets-filter {
   margin: 10px;
@@ -48,24 +48,24 @@
 }
 
 @media screen and (min-width: 968px) {  
-  .my-tickets {
+  /* .my-tickets {
     text-align: center;
   }
-  
-  .my-tickets li {
+   */
+  /* .my-tickets li {
     border: solid rgb(3, 3, 3);
     width: 40%;
     margin: 0 30% 1% 30%;
     list-style: none;
     border-radius: 5px;
     text-align: left;
-  }
+  } */
   
-  .my-tickets li p {
+  /* .my-tickets li p {
     padding: 5px;
-  }
+  } */
   
-  .ticket-view {
+  /* .ticket-view {
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -73,7 +73,7 @@
     color: white;
     font-weight: 700;
     font-size: 20px;
-  }
+  } */
   
   .mytickets-filter {
     margin: 10px;
