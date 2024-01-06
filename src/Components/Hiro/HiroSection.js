@@ -4,6 +4,7 @@ import Calculate from "../Calculate/Calculate"
 import Type from "../Type/Type"
 import Online from "../Online/Online"
 import Book from "../Book/Book"
+import Refferal from "../Refferal/Refferal"
 
 const pic = require("./pic.PNG")
 
@@ -51,6 +52,7 @@ const HiroSection = () => {
                   <Type />
                     <Logo />
                     <Calculate />
+                    <Refferal />
                 </div>
             </section>
       // <section>
