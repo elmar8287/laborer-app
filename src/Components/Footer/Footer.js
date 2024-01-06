@@ -4,20 +4,12 @@ const Footer = () => {
 
   const footerNavs = [
       {
-          href: 'javascript:void()',
-          name: 'Terms'
+          href: '#booking',
+          name: 'Booking'
       },
       {
-          href: 'javascript:void()',
-          name: 'License'
-      },
-      {
-          href: 'javascript:void()',
-          name: 'Privacy'
-      },
-      {
-          href: 'javascript:void()',
-          name: 'About us'
+          href: '#type',
+          name: 'Appliance types'
       }
   ]
   return (

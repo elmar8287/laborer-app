@@ -21,7 +21,7 @@ const Book = (e) => {
 
   return (
     
-      <section className="py-14 max-w-screen-xl mx-auto ">
+      <section className="py-14 max-w-screen-xl mx-auto " id="booking">
         
         <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-blue-600 md:px-8 md:mx-8 shadow-2xl background">
         <div className="relative z-10 max-w-2xl mx-auto sm:text-center">

@@ -92,9 +92,12 @@ const Navbar = ({accounts, handleLogout, user, myTickets}) => {
                     <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/">Home</Link>
                         </li>
+                        <li className="text-gray-700 hover:text-gray-900">
+                        <a href="#referral">Referral Program</a>
+                        </li>
                         {
                             user ?
-                            <li className="text-gray-700 hover:text-gray-900 font-semibold text-green-500">
+                            <li className="text-gray-700 hover:text-gray-900">
                         <Link to="/request">New Request</Link>
                         </li>
                         : null
@@ -103,13 +106,10 @@ const Navbar = ({accounts, handleLogout, user, myTickets}) => {
                         {
                             user ?
                             <li className="text-gray-700 hover:text-gray-900">
-                        <Link to="/tickets">My requests</Link> ({myTickets.filter(e => e.user===user.email).length})
+                        <Link to="/tickets">All requests</Link> ({myTickets.filter(e => e.user===user.email).length})
                         </li>
                         :null
                         }
-                        <li className="text-gray-700 hover:text-gray-900">
-                        <Link to="/services">Services</Link>
-                        </li>
                         {
                             user ?
                             <li className="text-gray-700 hover:text-gray-900">
