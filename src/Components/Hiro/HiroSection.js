@@ -6,6 +6,7 @@ import Online from "../Online/Online"
 import Book from "../Book/Book"
 import Refferal from "../Refferal/Refferal"
 import Footer from "../Footer/Footer"
+import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton"
 
 const pic = require("./pic.PNG")
 
@@ -55,6 +56,8 @@ const HiroSection = () => {
                     <Calculate />
                     <Refferal />
                     <Footer />
+                    <a href="https://api.whatsapp.com/send?phone=+13466290122"><ScrollToTopButton /></a>
+                    
                 </div>
             </section>
       // <section>
