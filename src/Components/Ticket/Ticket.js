@@ -81,9 +81,11 @@ const Ticket = ({ user, myTickets, accounts }) => {
   const profileData = accounts.filter((e) => e.user === user.email);
 
   return (
+   
     <div className="ticket bg-blue-200">
-      {profileData.length === 0 ? (
-        <div>
+      {profileData.length === 0 && user ? (
+        
+          <div>
           <h2 className="text-gray-900 font-extrabold text-3xl">
             Congratulations!
           </h2>
@@ -98,8 +100,30 @@ const Ticket = ({ user, myTickets, accounts }) => {
           <p className="mt-2">You have also got 15% discount on your first diagnosis (service call)!</p>
           <img src={award} alt="award-discount" className="rounded-lg mt-5 shadow-2xl" />
         </div>
+        
       ) : (
+     
+        
         <div>
+          {
+            !user ? 
+            
+            <div className="text-md leading-10">
+              <h3 className="text-center font-bold text-2xl text-red-600">WARNING!</h3>
+              <p className="text-red-500">Login failed</p>
+              <p>Following reasons could be:</p>
+              <ul className="list-disc ml-4 font-bold">
+              <li>The username or password is incorrect</li>
+              <li>The email address is already in use by another account.</li>
+              </ul>
+              <p>Please, try again. Go to{" "}
+                <Link to="/login" className="underline font-bold">Login page</Link></p>
+            </div>
+            
+            : 
+            <div>
+         
+          
           <h2 className="text-3xl font-extrabold">Appointment form</h2>
           {created && (
              <div className='p-4 mt-3 bg-green-200 rounded-xl flex items-center justify-center text-center'>
@@ -111,7 +135,7 @@ const Ticket = ({ user, myTickets, accounts }) => {
              </div>
          </div>
           )}
-          {created ? null : (
+          {created  ? null : (
             <form ref={form} className="ticket-form" onSubmit={()=> {handleSubmit(); sendEmail()}}>
               <label className="text-sm font-semibold mt-4">
                 Appointment date?
@@ -197,11 +221,14 @@ const Ticket = ({ user, myTickets, accounts }) => {
                 Submit
               </button>
             </form>
-          )}
+          )}</div>}
         </div>
       )}
+      
     </div>
+  
   );
+       
 };
 
 export default Ticket;
