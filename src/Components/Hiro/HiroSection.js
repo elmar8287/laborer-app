@@ -27,7 +27,7 @@ const HiroSection = () => {
             Over 200 successful clients
           </h1>
           <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-            Expert Appliance Repairs{" "}
+            Expert Appliance Repairs in Houston{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
               Precision and Reliability
             </span>
