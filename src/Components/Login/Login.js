@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import firebase from 'firebase';
 import "../App/App.css"
 
-const logo = require("../../images/logo-laborer-app.png")
+const logo = require("./logo_app.PNG")
 
 const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount, emailError, passwordError}) => {
   const navigate = useNavigate()
@@ -20,7 +20,7 @@ const Login = ({email, setEmail, password, setPassword, handleLogin, handleSignu
       <div className="app-title flex justify-center">
       {/* <h2>Laborer</h2>
       <p>save your time</p> */}
-      <img src={logo} className='w-[200px] rounded-lg' alt="logo-appliance-repair"/>
+      <img src={logo} className='w-[200px] rounded-full' alt="logo-appliance-repair"/>
       </div>
         <input
           maxlength="50"
