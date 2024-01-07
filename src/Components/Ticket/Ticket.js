@@ -108,7 +108,7 @@ const Ticket = ({ user, myTickets, accounts }) => {
           {
             !user ? 
             
-            <div className="text-md leading-10">
+            <div className="text-sm leading-10">
               <h3 className="text-center font-bold text-2xl text-red-600">WARNING!</h3>
               <p className="text-red-500">Login failed</p>
               <p>Following reasons could be:</p>
