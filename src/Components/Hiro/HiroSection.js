@@ -8,12 +8,14 @@ import Refferal from "../Refferal/Refferal";
 import Footer from "../Footer/Footer";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import { Link } from "react-router-dom";
+import Banner from "../Banner/Banner";
 
 const pic = require("./pic.PNG");
 
 const HiroSection = () => {
   return (
     <section className="py-2 md:py-22">
+      <Banner />
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
         <div className="flex-none mt-2 md:mt-0 md:max-w-xl">
           <img
