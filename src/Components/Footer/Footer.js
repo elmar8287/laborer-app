@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <p>Email: appliance.repair.expert.houston@gmail.com
 </p>
-<p>Phone.WhatsApp: +1 346 629 0122</p>
+<p>Phone/WhatsApp: +1 346 629 0122</p>
             <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
               {footerNavs.map((item, idx) => (
                 <li className="text-gray-800 hover:text-gray-500 duration-150">
