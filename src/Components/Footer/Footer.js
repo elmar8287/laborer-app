@@ -21,15 +21,15 @@ const Footer = () => {
         <div className="justify-between sm:flex">
           <div className="space-y-6">
             <img src={logo} className="w-32" alt="logo-appliance-repair" />
-            <p className="max-w-md">
+            <p className="max-w-md font-bold text-lg">
               The main goal is to make our clients HAPPY!
             </p>
-            <p>Email: appliance.repair.expert.houston@gmail.com
+            <p className="text-sm">Email: appliance.repair.expert.houston@gmail.com
 </p>
-<p>Phone/WhatsApp: +1 346 629 0122</p>
+<p className="text-sm">Phone/WhatsApp: +1 346 629 0122</p>
             <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
               {footerNavs.map((item, idx) => (
-                <li className="text-gray-800 hover:text-gray-500 duration-150">
+                <li className="text-gray-800 hover:text-gray-500 duration-150 underline">
                   <a key={idx} href={item.href}>
                     {item.name}
                   </a>
