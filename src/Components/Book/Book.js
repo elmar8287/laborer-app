@@ -38,7 +38,7 @@ const Book = (e) => {
             <div className="mt-6">
                 <form
                 ref={form} onSubmit={sendEmail}
-                    className="shadow-2xl flex flex-col items-center justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
+                    className="text-left shadow-2xl flex flex-col justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
                     <input
                         type="text"
                         placeholder="Enter your name"
@@ -60,6 +60,7 @@ const Book = (e) => {
                         required
                         name="address"
                     />
+                    <label className="text-gray-400 ml-1 mt-2">Enter appointment date</label>
                      <input
                         type="date"
                         placeholder="Enter appointment date"
@@ -67,6 +68,7 @@ const Book = (e) => {
                         required
                         name="date"
                     />
+                    <label className="text-gray-400 ml-1 mt-2">Enter appointment time</label>
                     <input
                         type="time"
                         placeholder="Enter appointment time"
@@ -74,6 +76,7 @@ const Book = (e) => {
                         required
                         name="time"
                     />
+                    <label className="text-gray-400 ml-1 mt-2">Select Appliance type</label>
                     <select
                         type="text"
                         placeholder="Enter appointment time"
@@ -81,7 +84,7 @@ const Book = (e) => {
                         required
                         name="appliance"
                     >
-                      <option hidden>Select Appliance type</option>
+                      <option hidden>Select from this list</option>
                       <option>Dishwasher</option>
                       <option>Dryer</option>
                       <option>Freezer</option>
