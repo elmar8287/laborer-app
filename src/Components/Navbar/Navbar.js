@@ -27,7 +27,7 @@ const Navbar = ({ accounts, handleLogout, user, myTickets }) => {
           <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 lg:flex lg:px-8">
             <div className="flex items-center justify-between py-2 lg:block">
               <a href="/">
-                <img src={logo} width={70} height={30} alt="Float UI logo" />
+                <img src={logo} width={70} height={30} alt="Appliance repair service" />
               </a>
               <div className="lg:hidden">
                 <button

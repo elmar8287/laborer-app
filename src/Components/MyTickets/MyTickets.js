@@ -87,7 +87,7 @@ const MyTickets = ({ user, myTickets, accounts }) => {
                   Appointment on: {ticket.date} | {ticket.time}
                 </p>
                 <p>Address: {ticket.address}</p>
-                <p>Address: {ticket.phone}</p>
+                <p>Phone: {ticket.phone}</p>
                 <div className="text-wrap">
                 <p className="text-wrap">Details: {ticket.description}</p>
                 </div>

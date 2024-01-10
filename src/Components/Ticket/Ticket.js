@@ -130,7 +130,7 @@ const Ticket = ({ user, myTickets, accounts }) => {
              <BsCheckCircleFill  className='text-green-600 text-[50px] mr-4'/>
              <div>
              <h3 className='text-2xl text-gray-800 font-extrabold md:text-3xl'>Congratulation!</h3>
-             <p>You have successfully booked your appointment.</p>
+             <p>You have successfully booked an appointment.</p>
              <p>Go to view <Link to="/tickets" className="font-bold underline text-blue-800">All Appointments</Link></p>
              </div>
          </div>
