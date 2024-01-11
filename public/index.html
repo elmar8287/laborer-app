@@ -12,9 +12,29 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Event snippet for Book appointment conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-11467941985/9y4ICN_75oYZEOHQq9wq",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
 
-    <!-- Event snippet for Book appointment conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-11467941985/9y4ICN_75oYZEOHQq9wq'}); </script>
-
+    <!-- Event snippet for Book appointment conversion page -->
+    <script>
+      gtag("event", "conversion", {
+        send_to: "AW-11467941985/9y4ICN_75oYZEOHQq9wq",
+      });
+    </script>
 
     <title>Appliance Repair Service Experts</title>
     <!-- Google tag (gtag.js) -->
