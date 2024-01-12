@@ -14,7 +14,14 @@
     "personalization",
     "utilities"
   ],
-  "screenshots": [],
+  "screenshots": [
+    {
+      "src": "/scrnsht-appliance-hiro.PNG"
+    },
+    {
+      "src": "/scrnsht-appliance-cta.PNG"
+    }
+  ],
   "icons": [
     {
       "src": "/favicon.ico"
