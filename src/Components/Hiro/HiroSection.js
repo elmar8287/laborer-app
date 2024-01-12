@@ -8,7 +8,6 @@ import Refferal from "../Refferal/Refferal";
 import Footer from "../Footer/Footer";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import { Link } from "react-router-dom";
-import Banner from "../Banner/Banner";
 
 const pic = require("./pic.PNG");
 
@@ -70,7 +69,6 @@ const HiroSection = () => {
         </div>
       </div>
       <div className="mt-14 px-4 md:px-8">
-      <Banner />
         <Online />
         <Book />
         <Refferal />
