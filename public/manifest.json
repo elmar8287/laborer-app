@@ -1,11 +1,12 @@
 {
   "background_color": "#ffffff",
+  "lang": "en",
   "description": "Appliance repair service for dishwasher, washaer, dryer, refrigerator, cooktop, oven, microwave, stove, freezer. Same day appointment with low service call and labor fees",
-  "dir": "ltr",
+  "dir": "auto",
   "display": "standalone",
   "name": "appliance-repair-expert",
   "orientation": "any",
-  "scope": "/",
+  "scope": "https://appliance-repair-expert.com/",
   "short_name": "appliance-repair-expert",
   "start_url": "/",
   "theme_color": "#000000",
@@ -14,41 +15,47 @@
     "personalization",
     "utilities"
   ],
-  "screenshots": [
-    {
-      "src": "/scrnsht-appliance-hiro.PNG"
-    },
-    {
-      "src": "/scrnsht-appliance-cta.PNG"
-    }
-  ],
   "icons": [
     {
-      "src": "/favicon.ico"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "/logo48.png"
+      "src": "logo48.png",
+      "type": "image/png",
+      "sizes": "48x48"
     },
     {
-      "src": "/logo96.png"
+      "src": "logo128.png",
+      "type": "image/png",
+      "sizes": "128x128"
     },
     {
-      "src": "/logo128.png"
+      "src": "logo96.png",
+      "type": "image/png",
+      "sizes": "96x96"
     },
     {
-      "src": "/logo144.png"
+      "src": "logo144.png",
+      "type": "image/png",
+      "sizes": "144x144"
     },
     {
-      "src": "/logo152.png"
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "/logo192.png"
+      "src": "logo152.png",
+      "type": "image/png",
+      "sizes": "152x152"
     },
     {
-      "src": "/logo512.png"
-    },
-    {
-      "src": "/logo1024.png"
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ],
   "shortcuts": [],
