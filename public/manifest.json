@@ -1,0 +1,46 @@
+{
+  "background_color": "#ffffff",
+  "description": "Appliance repair service for dishwasher, washaer, dryer, refrigerator, cooktop, oven, microwave, stove, freezer. Same day appointment with low service call and labor fees",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "appliance-repair-expert",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "appliance-repair-expert",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "categories": [
+    "business",
+    "personalization",
+    "utilities"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/favicon.ico"
+    },
+    {
+      "src": "/logo48.png"
+    },
+    {
+      "src": "/logo96.png"
+    },
+    {
+      "src": "/logo128.png"
+    },
+    {
+      "src": "/logo144.png"
+    },
+    {
+      "src": "/logo152.png"
+    },
+    {
+      "src": "/logo192.png"
+    },
+    {
+      "src": "/logo512.png"
+    }
+  ],
+  "shortcuts": [],
+  "id": "Appliance repair service"
+}

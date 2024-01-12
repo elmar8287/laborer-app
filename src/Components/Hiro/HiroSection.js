@@ -24,15 +24,15 @@ const HiroSection = () => {
           />
         </div>
         <div className="mt-2 flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-          <h1 className="text-sm text-indigo-600 font-medium">
+          <h3 className="text-sm text-indigo-600 font-medium">
             Over 200 successful clients
-          </h1>
-          <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
+          </h3>
+          <h1 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
             Expert Appliance Repairs in Houston{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
               Precision and Reliability
             </span>
-          </h2>
+          </h1>
 
           <p>
             Ready to experience hassle-free appliance repairs? Schedule your
