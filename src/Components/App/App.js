@@ -12,12 +12,11 @@ import "./App.css";
 import Navbar from '../Navbar/Navbar';
 import MyTickets from '../MyTickets/MyTickets';
 import firebase from 'firebase';
-import About from '../About/About';
-import Services from '../Services/Services';
 import Ticket from '../Ticket/Ticket';
 import Hiro from '../Home/Hiro';
 import BottomNav from '../BottomNav/BottomNav';
 import HiroSection from '../Hiro/HiroSection';
+import Refferal from '../Refferal/Refferal';
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -167,8 +166,7 @@ const App = () => {
         />} />
       <Route path="/account" element={<Account user={user} accounts={accounts} />} />
       <Route path="/request" element={<Ticket user={user} myTickets={myTickets} accounts={accounts} />} />
-      <Route path="/about" element={<About user={user} />} />
-      <Route path="/services" element={<Services />} />
+      <Route path="/referral" element={<Refferal />} />
       <Route path="/tickets" element={<MyTickets user={user} accounts={accounts} myTickets={myTickets}/>} />
       </Routes>
     </div>

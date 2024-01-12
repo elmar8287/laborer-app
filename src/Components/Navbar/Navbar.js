@@ -76,7 +76,7 @@ const Navbar = ({ accounts, handleLogout, user, myTickets }) => {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="text-gray-700 hover:text-gray-900">
-                  <a href="#referral">Referral Program</a>
+                  <Link to="/referral">Referral Program</Link>
                 </li>
                 {user ? (
                   <li className="text-gray-700 hover:text-gray-900">
