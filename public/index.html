@@ -78,6 +78,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </script>
   </head>
   <body>
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('pwabuilder-sw.js')
+      }
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
