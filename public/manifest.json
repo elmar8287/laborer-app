@@ -4,10 +4,10 @@
   "description": "Appliance repair service for dishwasher, washer, dryer, refrigerator, cooktop, oven, microwave, stove, freezer. Same day appointment with low service call and labor fees",
   "dir": "auto",
   "display": "standalone",
-  "name": "appliance-repair-expert",
+  "name": "Appliance Experts",
   "orientation": "any",
   "scope": "https://appliance-repair-expert.com/",
-  "short_name": "appliance-repair-expert",
+  "short_name": "Appliance Experts",
   "start_url": "/",
   "theme_color": "#000000",
   "categories": [
