@@ -6,9 +6,8 @@
   "display": "standalone",
   "name": "Appliance Experts",
   "orientation": "any",
-  "scope": "https://appliance-repair-expert.com/",
   "short_name": "Appliance Experts",
-  "start_url": "/",
+  "start_url": "https://appliance-repair-expert.com/login",
   "theme_color": "#000000",
   "categories": [
     "business",
