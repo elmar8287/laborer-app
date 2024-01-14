@@ -27,7 +27,7 @@ const HiroSection = () => {
       
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
         <div className="flex-none mt-2 md:mt-0 md:max-w-xl">
-        <LazyLoad height={762} width={400} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+        <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
           <img
             src={pic}
             className=" md:rounded-tl-[108px]"
