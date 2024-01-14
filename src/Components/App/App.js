@@ -17,6 +17,7 @@ import Hiro from '../Home/Hiro';
 import BottomNav from '../BottomNav/BottomNav';
 import HiroSection from '../Hiro/HiroSection';
 import Refferal from '../Refferal/Refferal';
+import Error_404 from "../Error_404/Error_404";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -164,6 +165,7 @@ const App = () => {
             emailError={emailError}
             passwordError={passwordError}
         />} />
+        <Route path="/*" element={<Error_404 />}/>
       <Route path="/account" element={<Account user={user} accounts={accounts} />} />
       <Route path="/request" element={<Ticket user={user} myTickets={myTickets} accounts={accounts} />} />
       <Route path="/referral" element={<Refferal />} />
