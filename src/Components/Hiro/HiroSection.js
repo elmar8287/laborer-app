@@ -1,13 +1,23 @@
+import React, {Suspense} from "react";
 import "./Hiro.css";
-import Logo from "../Logo/Logo";
-import Calculate from "../Calculate/Calculate";
-import Type from "../Type/Type";
-import Online from "../Online/Online";
-import Book from "../Book/Book";
-import Refferal from "../Refferal/Refferal";
-import Footer from "../Footer/Footer";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import { Link } from "react-router-dom";
+import LazyLoad from 'react-lazy-load';
+import Online from "../Online/Online";
+import Book from "../Book/Book";
+import Refferal from "../Refferal/Refferal"
+import Logo from "../Logo/Logo";
+import Type from "../Type/Type";
+import Calculate from "../Calculate/Calculate";
+import Footer from "../Footer/Footer";
+
+// const Online = React.lazy(() => import("../Online/Online.js"));
+// const Book = React.lazy(() => import("../Book/Book.js"))
+// const Refferal = React.lazy(() => import("../Firebase/Fire.js"));
+// const Type = React.lazy(() => import("../Type/Type.js"));
+// const Logo = React.lazy(() => import("../Logo/Logo.js"));
+// const Calculate = React.lazy(() => import("../Calculate/Calculate.js"));
+// const Footer = React.lazy(() => import("../Footer/Footer.js"));
 
 const pic = require("./pic.PNG");
 
@@ -17,11 +27,13 @@ const HiroSection = () => {
       
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
         <div className="flex-none mt-2 md:mt-0 md:max-w-xl">
+        <LazyLoad height={762} width={400} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
           <img
             src={pic}
             className=" md:rounded-tl-[108px]"
             alt="appliance-repair"
           />
+          </LazyLoad>
         </div>
         <div className="mt-2 flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
           <h3 className="text-sm text-indigo-600 font-medium">
@@ -69,14 +81,16 @@ const HiroSection = () => {
         </div>
       </div>
       <div className="mt-14 px-4 md:px-8">
-        <Online />
+      <Suspense fallback={<div>...Loading</div>}>
+        <Online />	
         <Book />
         <Refferal />
         <Type />
         <Logo />
         <Calculate />
-
         <Footer />
+		</Suspense>
+        
         <a href="https://api.whatsapp.com/send?phone=+13466290122">
           <ScrollToTopButton />
         </a>
