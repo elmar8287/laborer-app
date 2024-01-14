@@ -5,6 +5,9 @@ const Error_404 = () => {
       <main>
           <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-start h-screen md:px-8">
               <div className="max-w-lg mx-auto space-y-3 text-center">
+              <h3 className="text-gray-300 text-4xl font-semibold sm:text-6xl">
+                      Error 404
+                  </h3>
                   <h3 className="text-gray-800 text-4xl font-semibold sm:text-5xl">
                       Page not found
                   </h3>
