@@ -30,7 +30,7 @@ const HiroSection = () => {
         <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
           <img
             src={pic}
-            className=" md:rounded-tl-[108px]"
+            className=" md:rounded-tl-[108px] shadow-md md:rounded-tr-lg md:rounded-bl-lg md:rounded-br-lg"
             alt="appliance-repair"
           />
           </LazyLoad>
