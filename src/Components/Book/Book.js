@@ -57,7 +57,7 @@ const Book = (e) => {
                       <option>Washer</option>
                       <option>Other</option>
                       </select>
-                    <label className="text-gray-400 ml-1 mt-2">Enter your name</label>
+                    
                     {/* <input
                         type="text"
                         className="text-gray-800 w-full p-2 border rounded-md outline-none"
