@@ -36,18 +36,18 @@ const HiroSection = () => {
           </LazyLoad>
         </div>
         <div className="mt-2 flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-          <h3 className="text-sm text-indigo-600 font-medium">
-            Over 200 successful clients
+          <h3 className="text-md text-indigo-600 font-medium">
+            Professional Appliance Repair Services
           </h3>
           <h1 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-            Expert Appliance Repairs in Houston{" "}
+            Need Urgent Repair Service?{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
-              Precision and Reliability
+            Are you located in Houston?
             </span>
           </h1>
 
           <p>
-            Ready to experience hassle-free appliance repairs? Schedule your
+            We are Appliance Repair Specialists in your area. Schedule your
             service now and let our expert technicians bring your appliances
             back to life. Click below to book your appointment or contact us for
             immediate assistance.
@@ -57,13 +57,13 @@ const HiroSection = () => {
               href="#booking"
               className="block py-2 px-4 text-center text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none"
             >
-              Book Appointment
+              Urgent Appointment
             </a>
             <Link
               to="/login"
               className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 duration-150 active:bg-gray-100 border rounded-lg md:inline-flex"
             >
-              Login
+              Login now
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
