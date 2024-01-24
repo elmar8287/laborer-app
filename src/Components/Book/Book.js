@@ -39,42 +39,7 @@ const Book = (e) => {
                 <form
                 ref={form} onSubmit={sendEmail}
                     className="gap-2 text-left shadow-2xl flex flex-col justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
-                    <label className="text-gray-400 ml-1 mt-2">Enter your name</label>
-                    <input
-                        type="text"
-                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
-                        required
-                        name="name"
-                    />
-                    <label className="text-gray-400 ml-1 mt-2">Enter your phone number</label>
-                    <input
-                        type="phone"
-                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
-                        required
-                        name="phone"
-                    />
-                    <label className="text-gray-400 ml-1 mt-2">Enter your full address</label>
-                    <input
-                        type="text"
-                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
-                        required
-                        name="address"
-                    />
-                    <label className="text-gray-400 ml-1 mt-2">Enter appointment date</label>
-                     <input
-                        type="date"
-                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
-                        required
-                        name="date"
-                    />
-                    <label className="text-gray-400 ml-1 mt-2">Enter appointment time</label>
-                    <input
-                        type="time"
-                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
-                        required
-                        name="time"
-                    />
-                    <label className="text-gray-400 ml-1 mt-2">Select Appliance type</label>
+                     <label className="text-gray-400 ml-1 mt-2">Select Appliance type</label>
                     <select
                         type="text"
                         className="text-gray-800 w-full p-2 border rounded-md outline-none"
@@ -92,6 +57,42 @@ const Book = (e) => {
                       <option>Washer</option>
                       <option>Other</option>
                       </select>
+                    <label className="text-gray-400 ml-1 mt-2">Enter your name</label>
+                    {/* <input
+                        type="text"
+                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
+                        required
+                        name="name"
+                    /> */}
+                    <label className="text-gray-400 ml-1 mt-2">Enter your phone number</label>
+                    <input
+                        type="phone"
+                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
+                        required
+                        name="phone"
+                    />
+                    <label className="text-gray-400 ml-1 mt-2">ZIP code</label>
+                    <input
+                        type="text"
+                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
+                        required
+                        name="address"
+                    />
+                    <label className="text-gray-400 ml-1 mt-2">Enter appointment date</label>
+                     <input
+                        type="date"
+                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
+                        required
+                        name="date"
+                    />
+                    {/* <label className="text-gray-400 ml-1 mt-2">Enter appointment time</label>
+                    <input
+                        type="time"
+                        className="text-gray-800 w-full p-2 border rounded-md outline-none"
+                        required
+                        name="time"
+                    /> */}
+                   
                       <label className="text-gray-400 ml-1 mt-2">Describe the issue detail</label>
                       <textarea
                         type="textarea"
