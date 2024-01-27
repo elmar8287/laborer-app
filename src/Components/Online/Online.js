@@ -33,7 +33,7 @@ const Online = () => {
                       Referral program
                   </a>
                   <p className="text-gray-500 leading-relaxed mt-3">
-                  We ask 100$ for a service call, which means coming to your address and making a full diagnosis of your appliance. We provide you with the issue reason and offer the repair. If you discard the repair, then the diagnosis fee will be charged, otherwise, you will pay only the repair fee.
+                  Service call - means coming to your address and making a full diagnosis of your appliance. We provide you with the issue reason and offer the repair. If you agree with the repair, then the labor fee will be charged, otherwise, you will pay only the service call fee.
                   </p>
               </div>
               <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
