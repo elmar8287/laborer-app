@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const discount = require("./referral.PNG");
+const discount = require("./referral.webp");
 
 const Refferal = () => {
   return (

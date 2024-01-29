@@ -2,7 +2,7 @@ import {
     Link
   } from 'react-router-dom';
 
-const discount = require("./disc.PNG")
+const discount = require("./disc.webp")
 
 const Online = () => {
   return (
