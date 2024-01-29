@@ -19,7 +19,7 @@ import Footer from "../Footer/Footer";
 // const Calculate = React.lazy(() => import("../Calculate/Calculate.js"));
 // const Footer = React.lazy(() => import("../Footer/Footer.js"));
 
-const pic = require("./pic.PNG");
+const pic = require("./pic.webp");
 
 const HiroSection = () => {
   return (
