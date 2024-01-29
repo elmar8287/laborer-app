@@ -1,9 +1,9 @@
-const bosch = require("./1.jpeg")
-const samsung = require("./2.png")
-const mille = require("./3.png")
-const maytag = require("./4.jpeg")
-const kitchen = require("./5.png")
-const wir = require("./6.png")
+const bosch = require("./1.webp")
+const samsung = require("./2.webp")
+const mille = require("./3.webp")
+const maytag = require("./4.webp")
+const kitchen = require("./5.webp")
+const wir = require("./6.webp")
 
 const Logo = () => {
   return (
