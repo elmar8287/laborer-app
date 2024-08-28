@@ -1,4 +1,4 @@
-const logo = require("./logo.PNG");
+const logo = require("./alpha_logo.PNG");
 
 const Footer = () => {
   const footerNavs = [

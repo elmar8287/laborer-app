@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 
-const logo = require("./logo.PNG");
+const logo = require("./alpha_logo.PNG");
 
 const Navbar = ({ accounts, handleLogout, user, myTickets }) => {
   const location = useLocation();
