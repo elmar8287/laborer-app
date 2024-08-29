@@ -10,6 +10,7 @@ import Logo from "../Logo/Logo";
 import Type from "../Type/Type";
 import Calculate from "../Calculate/Calculate";
 import Footer from "../Footer/Footer";
+import Review from "../Reviews/Review";
 
 // const Online = React.lazy(() => import("../Online/Online.js"));
 // const Book = React.lazy(() => import("../Book/Book.js"))
@@ -19,7 +20,7 @@ import Footer from "../Footer/Footer";
 // const Calculate = React.lazy(() => import("../Calculate/Calculate.js"));
 // const Footer = React.lazy(() => import("../Footer/Footer.js"));
 
-const pic = require("./pic.webp");
+const pic = require("./appliance-cover-microvawe.PNG");
 
 const HiroSection = () => {
   return (
@@ -83,6 +84,7 @@ const HiroSection = () => {
       <div className="mt-14 px-4 md:px-8">
       <Suspense fallback={<div>...Loading</div>}>
         <Type />
+        <Review />
 			  <Logo />
 			  	
         <Book />

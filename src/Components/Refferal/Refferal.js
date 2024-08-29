@@ -57,6 +57,12 @@ const Refferal = () => {
           <span className="text-2xl text-gray-800 font-extrabold md:text-3xl">
             10% discount for labor fee{" "}
           </span>
+          <h3 className="mt-2 text-3xl text-gray-800 font-extrabold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
+            Call Now
+          </h3>{" "}
+          <span className="text-2xl text-gray-800 font-extrabold md:text-3xl">
+            346-629-0122{" "}
+          </span>
         </div>
         <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
           <img
