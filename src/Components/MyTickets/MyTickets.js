@@ -102,6 +102,9 @@ const MyTickets = ({ user, myTickets, accounts }) => {
                 <p className="text-[10px]">
                   Appointment created date: {ticket.created}
                 </p>
+                <p className="text-[10px]">
+                  Created by: {ticket.user}
+                </p>
                 </div>
               </li>
             ))

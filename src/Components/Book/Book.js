@@ -93,7 +93,7 @@ const Book = (e) => {
                         name="time"
                     /> */}
                    
-                      <label className="text-gray-400 ml-1 mt-2">Describe the issue detail</label>
+                      <label className="text-gray-400 ml-1 mt-2">Describe the issue details below</label>
                       <textarea
                         type="textarea"
                         maxlength="400"
@@ -114,7 +114,7 @@ const Book = (e) => {
                 <BsCheckCircleFill  className='text-green-600 text-[50px] mr-4'/>
                 <div>
                 <h3 className='text-2xl text-gray-800 font-extrabold md:text-3xl'>Congratulation!</h3>
-                <p>You have successfully booked an appointment.</p>
+                <p className='text-sm mt-2'>You have successfully booked an appointment. We will contact you in a very short time. You can also contact 346-629-0122 to check the status of appointment</p>
                
                 </div>
             </div>
