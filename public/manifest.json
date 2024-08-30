@@ -4,10 +4,10 @@
   "description": "Appliance repair service for dishwasher, washer, dryer, refrigerator, cooktop, oven, microwave, stove, freezer. Same day appointment with low service call and labor fees",
   "dir": "auto",
   "display": "standalone",
-  "name": "Appliance Experts",
+  "name": "Alpha Appliance Repair",
   "orientation": "any",
-  "short_name": "Appliance Experts",
-  "start_url": "https://appliance-repair-expert.com/login",
+  "short_name": "Alpha Appliance Repair",
+  "start_url": "https://alpha-appliance-repair.com/login",
   "theme_color": "#000000",
   "categories": [
     "business",
@@ -58,5 +58,5 @@
     }
   ],
   "shortcuts": [],
-  "id": "Appliance repair service"
+  "id": "Alpha Appliance repair service"
 }
