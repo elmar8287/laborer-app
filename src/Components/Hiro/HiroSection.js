@@ -27,7 +27,7 @@ const HiroSection = () => {
     <section className="py-2 md:py-22">
       
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
-        <div className="flex-none mt-2 md:mt-0 md:max-w-xl">
+        <div className="flex-nonemd:max-w-xl">
         <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
           <img
             src={pic}
@@ -47,7 +47,7 @@ const HiroSection = () => {
             </span>
           </h1>
 
-          <p>
+          <p className="leading-tight text-sm">
             We are Appliance Repair Specialists in your area. Schedule your
             service now and let our expert technicians bring your appliances
             back to life. Click below to book your appointment or contact us for
@@ -56,7 +56,7 @@ const HiroSection = () => {
           <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 text-lg font-bold">
             <a
               href="#booking"
-              className="block py-2 px-4 text-center text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none animate-pulseScale"
+              className="block py-4 px-4 text-center text-2xl text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none animate-pulseScale"
             >
               Urgent Appointment
             </a>

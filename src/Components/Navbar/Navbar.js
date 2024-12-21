@@ -67,11 +67,11 @@ const Navbar = ({ accounts, handleLogout, user, myTickets }) => {
               </div>
             </div>
             <div
-              className={`flex-1 items-center mt-8 lg:mt-0 lg:flex ${
+              className={`flex-1 items-center mt-4 lg:mt-0 lg:flex ${
                 state ? "block" : "hidden"
               } `}
             >
-              <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+              <ul className="justify-center items-center space-y-2 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-gray-700 hover:text-gray-900">
                   <Link to="/">Home</Link>
                 </li>
@@ -96,7 +96,7 @@ const Navbar = ({ accounts, handleLogout, user, myTickets }) => {
                   </li>
                 ) : null}
               </ul>
-              <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
+              <div className="flex-1 gap-x-6 items-center justify-end mt-2 space-y-6 md:flex md:space-y-0 md:mt-0">
                 {user ? (
                   <div className="avatar">
                     <h2 className="user-info text-orange-500 font-extrabold">
