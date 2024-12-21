@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import emailjs from '@emailjs/browser';
-import { BsCheckCircleFill } from "react-icons/bs";
 
 import "./Book.css";
 

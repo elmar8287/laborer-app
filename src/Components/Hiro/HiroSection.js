@@ -56,7 +56,7 @@ const HiroSection = () => {
           <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 text-lg font-bold">
             <a
               href="#booking"
-              className="block py-2 px-4 text-center text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none"
+              className="block py-2 px-4 text-center text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none animate-pulseScale"
             >
               Urgent Appointment
             </a>
