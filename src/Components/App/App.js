@@ -18,6 +18,7 @@ import BottomNav from '../BottomNav/BottomNav';
 import HiroSection from '../Hiro/HiroSection';
 import Refferal from '../Refferal/Refferal';
 import Error_404 from "../Error_404/Error_404";
+import Thanks from "../Thanks/Thanks";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -169,6 +170,7 @@ const App = () => {
       <Route path="/account" element={<Account user={user} accounts={accounts} />} />
       <Route path="/request" element={<Ticket user={user} myTickets={myTickets} accounts={accounts} />} />
       <Route path="/referral" element={<Refferal />} />
+      <Route path="/thanks" element={<Thanks />} />
       <Route path="/tickets" element={<MyTickets user={user} accounts={accounts} myTickets={myTickets}/>} />
       </Routes>
     </div>
