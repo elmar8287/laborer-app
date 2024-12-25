@@ -37,13 +37,13 @@ const HiroSection = () => {
           </LazyLoad>
         </div>
         <div className="mt-2 flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-          <h3 className="text-md text-indigo-600 font-medium">
-            Professional Appliance Repair Services
+          <h3 className="text-xl text-indigo-600 font-bold">
+            Need Appliance Repair Services?
           </h3>
           <h1 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-            Need Urgent Repair Service?{" "}
+          Fast & Reliable Repair{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
-            Are you located in Houston?
+            Get 15% off labor fee now!
             </span>
           </h1>
 
@@ -58,9 +58,12 @@ const HiroSection = () => {
               href="#booking"
               className="block py-4 px-4 text-center text-2xl text-white bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none animate-pulseScale"
             >
-              Urgent Appointment
+              Book in a minute
             </a>
-            <Link
+            <a href="tel:3462685088" class="flex items-center justify-center text-md gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
+  Call 346-268-5088
+</a>
+            {/* <Link
               to="/login"
               className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 duration-150 active:bg-gray-100 border rounded-lg md:inline-flex"
             >
@@ -77,17 +80,19 @@ const HiroSection = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
       <div className="mt-14 px-4 md:px-8">
       <Suspense fallback={<div>...Loading</div>}>
+      <Review />
+      <Book />
         <Type />
-        <Review />
+        
 			  <Logo />
 			  	
-        <Book />
+        
 			  <Online />
         <Refferal />
         

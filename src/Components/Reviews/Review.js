@@ -8,10 +8,10 @@ const Review = () => {
           <div className="max-w-screen-xl mx-auto px-4 md:px-8">
               <div className="max-w-xl mx-auto text-center">
                   <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                  See what others saying about us
+                  Trusted Customers Reviews
                   </h3>
                   <p className="text-gray-600 mt-3">
-                  We proud of each review and always try to get more!
+                  See what others saying about us. We proud of each review and always try to get more!
                   </p>
               </div>
               <div className="mt-12 flex justify-center">
