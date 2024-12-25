@@ -8,6 +8,9 @@ export default () => {
           <h2 className="p-6 sm:p-10 text-3xl sm:text-5xl font-bold text-green-600">
             Congratulations!
           </h2>
+          <h2 className="p-2 sm:p-4 text-xl sm:text-2xl font-bold text-green-600">
+            We will contact you in 5 min!
+          </h2>
           <figure>
             <blockquote>
               <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
@@ -16,12 +19,12 @@ export default () => {
               </p>
             </blockquote>
             <div className="p-6 sm:p-12">
-              {/* Display the logo */}
+              {/* Display the logo
               <img
                 src={logo}
                 alt="Company Logo"
                 className="w-24 sm:w-32 h-auto mx-auto mb-4"
-              />
+              /> */}
               <p className="text-2xl sm:text-3xl font-bold text-gray-900">
                 346-268-5088
               </p>

@@ -27,11 +27,11 @@ const Book = (e) => {
 
     return (
         <section className="py-14 max-w-screen-xl mx-auto " id="booking">
-            <div className="relative overflow-hidden  px-4 py-14 rounded-2xl bg-blue-600 md:px-8 md:mx-8 shadow-2xl bg-[url('https://www.nakoo.net/images/sobipro/entries/381/welcome/img_washing_Machine_repair_thurles.jpeg')] bg-no-repeat bg-cover">
+            <div className="relative overflow-hidden  px-4 py-14 rounded-2xl bg-blue-900 md:px-8 md:mx-8 shadow-2xl bg-[url('https://www.nakoo.net/images/sobipro/entries/381/welcome/img_washing_Machine_repair_thurles.jpeg')] bg-no-repeat bg-cover">
                 <div className="relative z-10 max-w-2xl mx-auto sm:text-center">
                     <div className="space-y-3">
                         <h3 className="text-3xl text-white font-bold">
-                            Book online to Fix Your Appliance Today!
+                            Book online in a minute and get 15% discount!
                         </h3>
                         <p className="text-white leading-relaxed">
                             We carry out most of the work on the same day.
@@ -41,7 +41,7 @@ const Book = (e) => {
                         <form
                             ref={form} onSubmit={sendEmail}
                             className="gap-2 text-left shadow-2xl flex flex-col justify-center bg-white rounded-lg p-1 sm:max-w-md sm:mx-auto">
-                            <label className="text-gray-400 ml-1 mt-2">Select Appliance type</label>
+                            {/* <label className="text-gray-400 ml-1 mt-2">Select Appliance type</label>
                             <select
                                 type="text"
                                 className="text-gray-800 w-full p-2 border rounded-md outline-none"
@@ -58,30 +58,30 @@ const Book = (e) => {
                                 <option>Stove / Cooktop</option>
                                 <option>Washer</option>
                                 <option>Other</option>
-                            </select>
+                            </select> */}
 
-                            <label className="text-gray-400 ml-1 mt-2">Enter your phone number</label>
+                            <label className="text-gray-600 ml-1 mt-2">Enter your phone number</label>
                             <input
                                 type="phone"
                                 className="text-gray-800 w-full p-2 border rounded-md outline-none"
                                 required
                                 name="phone"
                             />
-                            <label className="text-gray-400 ml-1 mt-2">ZIP code</label>
+                            <label className="text-gray-600 ml-1 mt-2">ZIP code</label>
                             <input
                                 type="text"
                                 className="text-gray-800 w-full p-2 border rounded-md outline-none"
                                 required
                                 name="address"
                             />
-                            <label className="text-gray-400 ml-1 mt-2">Enter appointment date</label>
+                            {/* <label className="text-gray-400 ml-1 mt-2">Enter appointment date</label>
                             <input
                                 type="date"
                                 className="text-gray-800 w-full p-2 border rounded-md outline-none"
                                 required
                                 name="date"
-                            />
-                            <label className="text-gray-400 ml-1 mt-2">Describe the issue details below</label>
+                            /> */}
+                            <label className="text-gray-600 ml-1 mt-2">Describe the issue details below</label>
                             <textarea
                                 type="textarea"
                                 maxLength="400"
@@ -93,7 +93,7 @@ const Book = (e) => {
 
                             <button
                                 type="submit"
-                                className="p-2 px-3 rounded-lg font-bold text-lg mt-2 text-white bg-blue-600 hover:bg-blue-500 active:bg-blue-700 duration-150 outline-none shadow-md focus:shadow-none sm:px-4"
+                                className="p-2 px-3 rounded-lg font-bold text-2xl mt-2 text-white bg-blue-600 hover:bg-blue-500 active:bg-blue-700 duration-150 outline-none shadow-md focus:shadow-none sm:px-4"
                             >
                                 Book Now
                             </button>

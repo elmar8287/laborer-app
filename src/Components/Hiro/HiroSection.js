@@ -1,4 +1,5 @@
 import React, {Suspense} from "react";
+import { ReactTyped } from "react-typed";
 import "./Hiro.css";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import { Link } from "react-router-dom";
@@ -28,18 +29,39 @@ const HiroSection = () => {
       
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
         <div className="flex-nonemd:max-w-xl">
-        <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+        {/* <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
           <img
             src={pic}
             className="shadow-md md:rounded-tr-lg md:rounded-lg"
             alt="appliance-repair"
           />
-          </LazyLoad>
+          </LazyLoad> */}
+          <div className="py-16 m-2 bg-gradient-to-r from-[#4F46E5] to-[#E114E5] text-gray-50 text-center mb-8 rounded-xl">
+          <div className="container mx-auto px-6">
+        {/* Main Heading */}
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight text-white">
+          Need Appliance Repair?
+        </h1>
+
+        {/* Typed Text Effect */}
+        <ReactTyped
+          strings={[
+            "Dryer not spinning?",
+            "Washing machine leaking water?",
+            "Fridge not cooling?",
+            "Oven not heating properly?",
+            "Dishwasher leaving dishes dirty?",
+          ]}
+          typeSpeed={40}
+          backSpeed={20}
+          loop
+          className="text-2xl sm:text-3xl font-medium text-gray-100"
+        />
+      </div>
+    </div>
         </div>
         <div className="mt-2 flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-          <h3 className="text-xl text-indigo-600 font-bold">
-            Need Appliance Repair Services?
-          </h3>
+
           <h1 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
           Fast & Reliable Repair{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
@@ -86,8 +108,9 @@ const HiroSection = () => {
       </div>
       <div className="mt-14 px-4 md:px-8">
       <Suspense fallback={<div>...Loading</div>}>
-      <Review />
+      
       <Book />
+      <Review />
         <Type />
         
 			  <Logo />
