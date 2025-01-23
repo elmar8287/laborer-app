@@ -39,7 +39,7 @@ const HiroSection = () => {
           <div className="py-16 m-2 bg-gradient-to-r from-[#4F46E5] to-[#E114E5] text-gray-50 text-center mb-8 rounded-xl">
           <div className="container mx-auto px-6">
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight text-white">
+        <h1 className="text-2xl sm:text-5xl font-extrabold mb-6 tracking-tight text-white">
           Need Appliance Repair?
         </h1>
 
@@ -55,7 +55,7 @@ const HiroSection = () => {
           typeSpeed={40}
           backSpeed={20}
           loop
-          className="text-2xl sm:text-3xl font-medium text-gray-100"
+          className="text-lg sm:text-3xl font-medium text-gray-100"
         />
       </div>
     </div>
