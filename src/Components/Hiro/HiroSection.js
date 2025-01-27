@@ -108,19 +108,19 @@ const HiroSection = () => {
       </div>
       <div className="mt-14 px-4 md:px-8">
       <Suspense fallback={<div>...Loading</div>}>
-      
-      <Book />
       <Review />
+      
+      <Logo />
         <Type />
+        <Book />
+			  
         
-			  <Logo />
-			  	
         
 			  <Online />
         <Refferal />
-        
-        
         <Calculate />
+        
+        
         <Footer />
 		</Suspense>
         
