@@ -26,7 +26,7 @@ export default () => {
                 className="w-24 sm:w-32 h-auto mx-auto mb-4"
               /> */}
               <p className="text-2xl sm:text-3xl font-bold text-gray-900">
-                346-268-5088
+                281-769-2902
               </p>
             </div>
           </figure>
