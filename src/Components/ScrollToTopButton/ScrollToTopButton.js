@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { IoLogoWhatsapp } from "react-icons/io";
+// import { IoLogoWhatsapp } from "react-icons/io";
+import { FaPhoneFlip } from "react-icons/fa6";
 import './Scrol.css';
 
 function ScrollToTopButton() {
@@ -18,7 +19,7 @@ function ScrollToTopButton() {
   window.addEventListener('scroll', checkScrollTop);
 
   return (
-    <IoLogoWhatsapp className="scrollTop" style={{ height: 130, width: 60, display: showScroll ? 'flex' : 'none' }} />
+    <FaPhoneFlip className="scrollTop" style={{ height: 130, width: 60, display: showScroll ? 'flex' : 'none' }} />
   );
 }
 

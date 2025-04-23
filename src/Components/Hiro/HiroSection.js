@@ -124,7 +124,7 @@ const HiroSection = () => {
         <Footer />
 		</Suspense>
         
-        <a href="https://api.whatsapp.com/send?phone=+13466290122">
+        <a href="tel:2817692902">
           <ScrollToTopButton />
         </a>
       </div>
