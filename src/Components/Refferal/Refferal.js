@@ -61,7 +61,7 @@ const Refferal = () => {
             Call Now
           </h3>{" "}
           <span className="text-2xl text-gray-800 font-extrabold md:text-3xl">
-          281-769-2902{" "}
+          346-800-2250{" "}
           </span>
         </div>
         <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
