@@ -82,8 +82,8 @@ const HiroSection = () => {
             >
               Book in a minute
             </a>
-            <a href="tel:2817692902" class="flex items-center justify-center text-md gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
-  Call 281-769-2902
+            <a href="tel:3468002250" class="flex items-center justify-center text-md gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
+  Call 346-800-2250
 </a>
             {/* <Link
               to="/login"
@@ -124,7 +124,7 @@ const HiroSection = () => {
         <Footer />
 		</Suspense>
         
-        <a href="tel:2817692902">
+        <a href="tel:3468002250">
           <ScrollToTopButton />
         </a>
       </div>
