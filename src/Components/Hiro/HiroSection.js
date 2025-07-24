@@ -25,7 +25,7 @@ const pic = require("./appliance-cover-microvawe.PNG");
 
 const HiroSection = () => {
   return (
-    <section className="py-2 md:py-22">
+    <section className="py-4 md:py-24">
       
       <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-4">
         <div className="flex-nonemd:max-w-xl">
@@ -47,10 +47,10 @@ const HiroSection = () => {
         <ReactTyped
           strings={[
             "Dryer not spinning?",
-            "Washing machine leaking water?",
+            "Washing machine leaking?",
             "Fridge not cooling?",
             "Oven not heating properly?",
-            "Dishwasher leaving dishes dirty?",
+            "Dishwasher washing dirty?",
           ]}
           typeSpeed={40}
           backSpeed={20}
